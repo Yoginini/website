@@ -22,7 +22,7 @@ window.YOG = {
       'speaks corrections out loud, the way a teacher would across the room. Pose ' +
       'tracking runs on the device and video never leaves it. When you want a human, ' +
       'you book a real teacher by the hour.',
-    parent: { name: 'Factory Zero', id: 'FZ-004', url: 'https://factory0.ventures' }
+    parent: { name: 'Factory Zero', id: 'FZ-003', url: 'https://factory0.ventures' }
   },
 
   /* Launch state. Every claim on the site is gated on these, so flipping a

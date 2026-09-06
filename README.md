@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <b>yoginini.us</b> &middot; FZ-004
+  <b>yoginini.us</b> &middot; FZ-003
 </p>
 
 ---
@@ -234,7 +234,7 @@ pages say so and show the direct address rather than pretending to have sent:
 
 <p align="center">
   <sub>
-    <b>FZ-004</b> &middot; a <a href="https://factory0.ventures">Factory Zero</a> venture &middot;
+    <b>FZ-003</b> &middot; a <a href="https://factory0.ventures">Factory Zero</a> venture &middot;
     <a href="mailto:contact@yoginini.us">contact@yoginini.us</a>
   </sub>
 </p>
