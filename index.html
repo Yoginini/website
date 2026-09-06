@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yoginini — a yoga teacher who can see you</title>
+<meta name="description" content="Yoginini watches your yoga form through your phone camera and speaks corrections out loud. Pose tracking runs on the device; video never leaves it. Book real teachers by the hour.">
+<link rel="canonical" href="https://yoginini.us/">
+<meta name="theme-color" content="#100d17">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yoginini">
+<meta property="og:title" content="Yoginini — a yoga teacher who can see you">
+<meta property="og:description" content="Yoginini watches your yoga form through your phone camera and speaks corrections out loud. Pose tracking runs on the device; video never leaves it. Book real teachers by the hour.">
+<meta property="og:url" content="https://yoginini.us/">
+<meta property="og:image" content="https://yoginini.us/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yoginini — a yoga teacher who can see you">
+<meta name="twitter:description" content="Yoginini watches your yoga form through your phone camera and speaks corrections out loud. Pose tracking runs on the device; video never leaves it. Book real teachers by the hour.">
+<meta name="twitter:image" content="https://yoginini.us/assets/og.png">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="alternate" type="application/json" href="/yoginini.json" title="Yoginini, machine-readable">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="Yoginini for language models">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Figtree:wght@300;400;500;600&family=Space+Mono&display=swap">
+<link rel="stylesheet" href="/assets/yog.css">
+<style>
+  .sheet-card .form input, .sheet-card .form select {
+    border-color: rgba(236,231,244,.2); background: rgba(236,231,244,.05); color: var(--on-dark);
+  }
+  .sheet-card .form input::placeholder { color: var(--on-dark-5); }
+  .sheet-card .form input:focus, .sheet-card .form select:focus { border-color: var(--lav); }
+  .sheet-card .form select option { background: #100d17; }</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://yoginini.us/#org","name":"Yoginini","url":"https://yoginini.us","email":"contact@yoginini.us","description":"Yoginini is a yoga app that watches your form through your phone camera and speaks corrections out loud, the way a teacher would across the room. Pose tracking runs on the device and video never leaves it. When you want a human, you book a real teacher by the hour.","logo":"https://yoginini.us/assets/icon-512.png","parentOrganization":{"@type":"Organization","name":"Factory Zero","url":"https://factory0.ventures"}},{"@type":"WebSite","@id":"https://yoginini.us/#site","url":"https://yoginini.us","name":"Yoginini","publisher":{"@id":"https://yoginini.us/#org"},"inLanguage":"en"},{"@type":"SoftwareApplication","@id":"https://yoginini.us/#app","name":"Yoginini","applicationCategory":"HealthApplication","applicationSubCategory":"Yoga","operatingSystem":"iOS","description":"Yoginini is a yoga app that watches your form through your phone camera and speaks corrections out loud, the way a teacher would across the room. Pose tracking runs on the device and video never leaves it. When you want a human, you book a real teacher by the hour.","publisher":{"@id":"https://yoginini.us/#org"},"offers":[{"@type":"Offer","name":"Trial","price":"3","priceCurrency":"USD","description":"14 days trial, then the monthly membership","availability":"https://schema.org/PreOrder"},{"@type":"Offer","name":"Membership","price":"15","priceCurrency":"USD","availability":"https://schema.org/PreOrder","priceSpecification":{"@type":"UnitPriceSpecification","price":"15","priceCurrency":"USD","billingDuration":1,"billingIncrement":1,"unitCode":"MON","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}}]},{"@type":"FAQPage","@id":"https://yoginini.us/#faq","mainEntity":[{"@type":"Question","name":"Does anyone see my camera feed?","acceptedAnswer":{"@type":"Answer","text":"No. Video is processed on your phone and discarded frame by frame. Our servers receive joint angles and scores, never images. There is nothing to watch, even for us."}},{"@type":"Question","name":"I'm a complete beginner. Will it just tell me I'm wrong all the time?","acceptedAnswer":{"@type":"Answer","text":"Every pose ships with beginner, intermediate and advanced tolerances, and over time the app scales to your own baseline. A tight hamstring is a starting point, not an error."}},{"@type":"Question","name":"What happens after the $3 trial?","acceptedAnswer":{"@type":"Answer","text":"After 14 days it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap."}},{"@type":"Question","name":"Are coaching sessions included in the membership?","acceptedAnswer":{"@type":"Answer","text":"No. Coaches set their own hourly rate, and you pay per session. Your membership gives you their published poses and sequences to practise between calls."}},{"@type":"Question","name":"Can a teacher look at my progress?","acceptedAnswer":{"@type":"Answer","text":"If you want them to. You choose which sessions, poses or your full history to send a coach for review. They see the same angles and scores the app saw, never video, and can reply with notes or a sequence to work on. Sharing is off by default and you can revoke it any time."}},{"@type":"Question","name":"Do I need special equipment?","acceptedAnswer":{"@type":"Answer","text":"A phone with a camera and somewhere to lean it. Landscape, about two metres away, roughly hip height. The app checks your framing before each session."}},{"@type":"Question","name":"Which phones?","acceptedAnswer":{"@type":"Answer","text":"iPhone first, Android shortly after. Join the waitlist and tell us which you use."}},{"@type":"Question","name":"Is Yoginini available yet?","acceptedAnswer":{"@type":"Answer","text":"Not yet. Nothing has shipped, no coaches are signed, and there is no app to download. The waitlist is the only thing that is real today."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="dark">
+  <div class="glow" style="background:radial-gradient(55% 60% at 78% 18%, rgba(179,157,219,.22), transparent 70%), radial-gradient(45% 45% at 8% 100%, rgba(224,168,107,.08), transparent 70%)"></div>
+  
+  <nav class="nav" data-open="false">
+    <a class="wordmark on-dark" href="/"><span class="lotus on-dark"><i></i><i></i><i></i><i></i><i></i><u></u></span><span>yogin<em>ini</em></span></a>
+    <button class="nav-toggle" type="button" aria-controls="nav-links">Menu</button>
+    <div class="nav-links" id="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/philosophy/">Philosophy</a>
+      <a href="/community/">Community</a>
+      <a href="/coaches/">Coaches</a>
+      <a href="/pricing/">Pricing</a>
+      <button class="btn btn-ghost-d" type="button" data-sheet>Join the waitlist</button>
+    </div>
+  </nav>
+  <div class="shell" style="position:relative;z-index:1;padding-block:clamp(32px,6vh,72px) clamp(56px,9vh,104px)">
+    <div class="grid-2 middle">
+      <div>
+        <p class="kicker on-dark" style="margin-bottom:0;animation:rise .9s both">Early access &middot; yoginini.us</p>
+        <h1 style="margin-top:24px;animation:rise 1s .1s both">A yoga teacher <em class="soft">who can see you.</em></h1>
+        <p class="lede" style="animation:rise 1s .22s both">Prop up your phone. Yoginini watches your form through the camera and speaks gentle corrections out loud, the way a good teacher would across the room. When you want a human, book one by the hour.</p>
+        <p style="margin:30px 0 0;display:flex;flex-wrap:wrap;gap:12px;animation:rise 1s .32s both">
+          <button class="btn btn-primary" type="button" data-sheet>Join the waitlist</button>
+          <a class="btn btn-ghost-d" href="#how" style="padding:15px 26px;font-size:15px">See how it works</a>
+        </p>
+        
+      <p class="fine" style="margin:26px 0 0;display:inline-flex;align-items:center;gap:9px">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--amber);display:inline-block;flex:none"></span>
+        In development. Nothing has shipped yet, no coaches are signed, and there is no app to download &mdash; the waitlist is the only thing that is real today.
+      </p>
+      </div>
+
+      <figure style="margin:0;animation:fadein 1.4s .3s both">
+        <div style="position:relative;aspect-ratio:4/4.6;border-radius:28px;border:1px solid rgba(236,231,244,.14);background:linear-gradient(165deg,#241c38,#150f22);overflow:hidden">
+          <div class="pill" style="position:absolute;top:16px;left:18px;color:var(--lav);z-index:2"><span class="led"></span>LIVE &middot; 24 FPS &middot; ON-DEVICE</div>
+          <div class="mono" style="position:absolute;top:16px;right:18px;font-size:10px;color:var(--on-dark-5);z-index:2">VRKSASANA</div>
+          <svg viewBox="0 0 300 420" style="position:absolute;inset:12% 10% 16%;width:80%;height:72%;overflow:visible" role="img" aria-label="A tracked figure in tree pose, with the left hip flagged four degrees low">
+      <circle cx="150" cy="58" r="20" fill="none" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s .3s forwards"/>
+      <line x1="150" y1="88" x2="116" y2="102" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 0.40s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="150" y1="88" x2="184" y2="102" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 0.48s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="116" y1="102" x2="104" y2="58" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 0.56s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="104" y1="58" x2="142" y2="14" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 0.64s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="184" y1="102" x2="196" y2="58" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 0.72s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="196" y1="58" x2="158" y2="14" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 0.80s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="116" y1="102" x2="130" y2="206" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 0.88s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="184" y1="102" x2="170" y2="206" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 0.96s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="130" y1="206" x2="170" y2="206" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 1.04s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="130" y1="206" x2="86" y2="252" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 1.12s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="86" y1="252" x2="152" y2="242" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 1.20s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="170" y1="206" x2="174" y2="296" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 1.28s cubic-bezier(.2,.7,.2,1) forwards"/><line x1="174" y1="296" x2="177" y2="386" stroke="#b39ddb" stroke-width="1.4" stroke-opacity=".7" stroke-dasharray="600" stroke-dashoffset="600" style="animation:drawline 1.6s 1.36s cubic-bezier(.2,.7,.2,1) forwards"/><circle cx="150" cy="88" r="3.2" fill="#b39ddb" style="transform-origin:150px 88px;transform-box:view-box;animation:pulse 2.8s 0.00s ease-in-out infinite"/><circle cx="116" cy="102" r="3.2" fill="#b39ddb" style="transform-origin:116px 102px;transform-box:view-box;animation:pulse 3.4s 0.15s ease-in-out infinite"/><circle cx="184" cy="102" r="3.2" fill="#b39ddb" style="transform-origin:184px 102px;transform-box:view-box;animation:pulse 4.0s 0.30s ease-in-out infinite"/><circle cx="104" cy="58" r="3.2" fill="#b39ddb" style="transform-origin:104px 58px;transform-box:view-box;animation:pulse 2.8s 0.45s ease-in-out infinite"/><circle cx="196" cy="58" r="3.2" fill="#b39ddb" style="transform-origin:196px 58px;transform-box:view-box;animation:pulse 3.4s 0.60s ease-in-out infinite"/><circle cx="142" cy="14" r="3.2" fill="#b39ddb" style="transform-origin:142px 14px;transform-box:view-box;animation:pulse 4.0s 0.75s ease-in-out infinite"/><circle cx="158" cy="14" r="3.2" fill="#b39ddb" style="transform-origin:158px 14px;transform-box:view-box;animation:pulse 2.8s 0.90s ease-in-out infinite"/><circle cx="130" cy="206" r="7" fill="none" stroke="#e0a86b" stroke-width="1" style="transform-origin:130px 206px;transform-box:view-box;animation:ring 2.4s ease-out infinite"/><circle cx="130" cy="206" r="4.5" fill="#e0a86b" style="transform-origin:130px 206px;transform-box:view-box;animation:pulse 3.4s 1.05s ease-in-out infinite"/><circle cx="170" cy="206" r="3.2" fill="#b39ddb" style="transform-origin:170px 206px;transform-box:view-box;animation:pulse 4.0s 1.20s ease-in-out infinite"/><circle cx="86" cy="252" r="3.2" fill="#b39ddb" style="transform-origin:86px 252px;transform-box:view-box;animation:pulse 2.8s 1.35s ease-in-out infinite"/><circle cx="152" cy="242" r="3.2" fill="#b39ddb" style="transform-origin:152px 242px;transform-box:view-box;animation:pulse 3.4s 1.50s ease-in-out infinite"/><circle cx="174" cy="296" r="3.2" fill="#b39ddb" style="transform-origin:174px 296px;transform-box:view-box;animation:pulse 4.0s 1.65s ease-in-out infinite"/><circle cx="177" cy="386" r="3.2" fill="#b39ddb" style="transform-origin:177px 386px;transform-box:view-box;animation:pulse 2.8s 1.80s ease-in-out infinite"/>
+      <text x="118" y="212" text-anchor="end" fill="#e0a86b" font-family="'Space Mono',monospace" font-size="9" letter-spacing="1">L HIP  -4&#176;</text>
+    </svg>
+          <div data-cue style="position:absolute;left:18px;right:18px;bottom:56px;z-index:2;animation:cuein 5s ease both">
+            <span style="display:inline-flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(236,231,244,.08);border:1px solid rgba(236,231,244,.16);border-radius:14px;backdrop-filter:blur(8px);max-width:100%">
+              <span style="display:inline-flex;gap:2px;align-items:flex-end;height:14px" aria-hidden="true">
+                <span style="width:2px;height:4px;background:var(--lav);border-radius:1px;animation:breathe .9s ease-in-out infinite"></span>
+                <span style="width:2px;height:10px;background:var(--lav);border-radius:1px;animation:breathe 1.1s ease-in-out infinite"></span>
+                <span style="width:2px;height:4px;background:var(--lav);border-radius:1px;animation:breathe 1.3s ease-in-out infinite"></span>
+                <span style="width:2px;height:10px;background:var(--lav);border-radius:1px;animation:breathe 1.5s ease-in-out infinite"></span>
+              </span>
+              <span class="cue-text" style="font-family:var(--serif);font-size:21px;font-style:italic;color:var(--on-dark);line-height:1.1">&ldquo;lift your left hip a little&rdquo;</span>
+            </span>
+          </div>
+          <div class="mono" style="position:absolute;left:18px;right:18px;bottom:20px;font-size:11px;color:var(--on-dark-5);z-index:2">knee 174&#176; &middot; hip 88&#176; &middot; spine 179&#176;</div>
+        </div>
+        <figcaption class="fine" style="margin-top:12px">A mockup of the in-app view. The app is not released.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track"><span>Mountain</span><span>Downward dog</span><span>Warrior I</span><span>Warrior II</span><span>Triangle</span><span>Tree</span><span>Chair</span><span>Low lunge</span><span>Forward fold</span><span>Bridge</span><span>Pigeon</span><span>Cobra</span><span>Plank</span><span>Chaturanga</span><span>Child's pose</span><span>Seated twist</span><span>Corpse</span><span>Warrior III</span><span>High lunge</span><span>Upward dog</span><span>Mountain</span><span>Downward dog</span><span>Warrior I</span><span>Warrior II</span><span>Triangle</span><span>Tree</span><span>Chair</span><span>Low lunge</span><span>Forward fold</span><span>Bridge</span><span>Pigeon</span><span>Cobra</span><span>Plank</span><span>Chaturanga</span><span>Child's pose</span><span>Seated twist</span><span>Corpse</span><span>Warrior III</span><span>High lunge</span><span>Upward dog</span></div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="sect shell" id="how">
+  <div class="grid-2 bottom" style="margin-bottom:clamp(40px,6vh,64px)">
+    <div>
+      <p class="kicker">How it works</p>
+      <h2 data-reveal>Three minutes to <em class="soft">your first correction.</em></h2>
+    </div>
+    <p class="lede" style="margin:0" data-reveal>No wearables, no special mat. The phone you already own, propped against a water bottle, is enough.</p>
+  </div>
+  <ol class="cards-3" style="list-style:none;margin:0;padding:0">
+    <li class="card" data-reveal>
+      <span class="mono" style="font-size:11px;color:var(--muted-2)">READ · 40 SEC</span>
+      <span class="step-n">01</span>
+      <h3>Learn the shape</h3>
+      <p class="body" style="margin:0">A short explanation of the pose, what it should feel like, and the one or two things people usually get wrong.</p>
+    </li>
+    <li class="card" data-reveal>
+      <span class="mono" style="font-size:11px;color:var(--muted-2)">SETUP · ONCE</span>
+      <span class="step-n">02</span>
+      <h3>Prop up your phone</h3>
+      <p class="body" style="margin:0">We walk you through distance, height and angle the first time. Most bad sessions are framing problems, so we fix framing first.</p>
+    </li>
+    <li class="card" data-reveal>
+      <span class="mono" style="font-size:11px;color:var(--muted-2)">PRACTICE · 5–60 MIN</span>
+      <span class="step-n">03</span>
+      <h3>Hold, and listen</h3>
+      <p class="body" style="margin:0">The camera tracks 33 points on your body and compares your joint angles to the reference. When something drifts, a calm voice says so.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="dark sect">
+  <div class="glow" style="background:radial-gradient(50% 60% at 20% 30%, rgba(179,157,219,.16), transparent 70%)"></div>
+  <div class="shell" style="position:relative">
+    <div class="grid-2">
+      <div>
+        <p class="kicker on-dark">Privacy, by construction</p>
+        <h2 data-reveal>Your bedroom stays <em class="soft">your bedroom.</em></h2>
+        <p class="lede" data-reveal>Every frame is analysed on your phone and thrown away. What leaves the device is a handful of numbers: 33 body points, the angles between them, and your score. There is no video to leak because there is no video to store.</p>
+        <p class="lede" data-reveal>We compare angles rather than positions, so it does not matter how tall you are or how far away you stand. It matters how you hold the shape.</p>
+        <p style="margin:28px 0 0"><a class="arrow" href="/privacy/">Read the privacy page <span aria-hidden="true">&rarr;</span></a></p>
+      </div>
+      <div data-reveal>
+        <div class="card card-dark" style="gap:20px">
+          <p class="mono" style="font-size:11px;color:var(--lav);margin:0">ON YOUR PHONE</p>
+          <p class="mono" style="font-size:13px;color:var(--on-dark-3);margin:0;line-height:1.9">Camera &rarr; 33 landmarks &rarr; joint angles &rarr; cue</p>
+          <hr style="border:0;border-top:1px dashed rgba(236,231,244,.2);margin:4px 0">
+          <p class="mono" style="font-size:11px;color:var(--lav);margin:0">ON OUR SERVER</p>
+          <p class="mono" style="font-size:13px;color:var(--on-dark-3);margin:0;line-height:1.9">Angles, scores, streaks. Never a pixel.</p>
+        </div>
+        <dl style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 0">
+          <div>
+            <dt style="font-family:var(--serif);font-size:44px;line-height:1;color:var(--on-dark)">33</dt>
+            <dd class="fine" style="margin:6px 0 0">body landmarks tracked</dd>
+          </div>
+          <div>
+            <dt style="font-family:var(--serif);font-size:44px;line-height:1;color:var(--on-dark)">0</dt>
+            <dd class="fine" style="margin:6px 0 0">frames uploaded, ever</dd>
+          </div>
+          <div>
+            <dt style="font-family:var(--serif);font-size:44px;line-height:1;color:var(--on-dark)">1s</dt>
+            <dd class="fine" style="margin:6px 0 0">before a cue is spoken</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect shell">
+  <div class="grid-2 middle">
+    <div data-reveal>
+      <div class="card" style="gap:0;padding:0;overflow:hidden">
+        <div style="display:flex;gap:16px;align-items:baseline;padding:18px 24px">
+          <span class="mono" style="font-size:11px;color:var(--purple);flex:none">0:04</span>
+          <span style="font-family:var(--serif);font-size:21px;font-style:italic;line-height:1.25">&ldquo;Shoulders back, just a touch.&rdquo;</span>
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline;padding:18px 24px;border-top:1px solid var(--band)">
+          <span class="mono" style="font-size:11px;color:var(--purple);flex:none">0:11</span>
+          <span style="font-family:var(--serif);font-size:21px;font-style:italic;line-height:1.25">&ldquo;Lift your left hip a little.&rdquo;</span>
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline;padding:18px 24px;border-top:1px solid var(--band)">
+          <span class="mono" style="font-size:11px;color:var(--purple);flex:none">0:19</span>
+          <span style="font-family:var(--serif);font-size:21px;font-style:italic;line-height:1.25">&ldquo;Lovely. Stay with your breath.&rdquo;</span>
+        </div>
+        <div style="display:flex;gap:16px;align-items:baseline;padding:18px 24px;border-top:1px solid var(--band)">
+          <span class="mono" style="font-size:11px;color:var(--purple);flex:none">0:31</span>
+          <span style="font-family:var(--serif);font-size:21px;font-style:italic;line-height:1.25">&ldquo;Let the front knee track over the ankle.&rdquo;</span>
+        </div>
+        <div style="padding:14px 24px;border-top:1px solid var(--band);background:var(--band)">
+          <span class="mono" style="font-size:10px;color:var(--muted-2)">COOLDOWN 5s</span>
+          <div style="height:3px;background:var(--line);border-radius:2px;margin-top:8px;overflow:hidden"><span style="display:block;height:100%;background:var(--lav);animation:cooldown 5s linear infinite"></span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="kicker">The voice</p>
+      <h2 data-reveal>It knows when <em class="soft">to say nothing.</em></h2>
+      <p class="lede" data-reveal>One cue at a time. Never off a single frame. Never twice in five seconds. If three things are off, you hear the one that keeps you safe, and the rest can wait.</p>
+      <p class="lede" data-reveal>Every phrase was written with a teacher, then rotated so it never sounds like a machine reading a list. After you finish, a short summary tells you what went well and what to watch next time.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band sect">
+  <div class="shell">
+    <div class="grid-2 bottom" style="margin-bottom:clamp(36px,5vh,56px)">
+      <div>
+        <p class="kicker">Human coaches</p>
+        <h2 data-reveal>When you want a person, <em class="soft">book one.</em></h2>
+      </div>
+      <p class="lede" style="margin:0" data-reveal>The AI fills the days between classes. A teacher does what no model can: notice you. Coaches set their own rate, keep 80% of it, and arrive at the call already knowing where you are stuck.</p>
+    </div>
+    <div class="rows" style="max-width:760px">
+      <div class="row-kv">
+        <span class="k">Typical hourly rate<small>Set by each coach</small></span>
+        <span class="v">$50–85</span>
+      </div>
+      <div class="row-kv">
+        <span class="k">Coach keeps<small>Paid out through Stripe</small></span>
+        <span class="v accent">80%</span>
+      </div>
+      <div class="row-kv">
+        <span class="k">Repeat student, same coach<small>Our share on bookings after the first</small></span>
+        <span class="v accent">10–12%</span>
+      </div>
+      <div class="row-kv">
+        <span class="k">Membership required?<small>To book a live session</small></span>
+        <span class="v" style="font-style:italic">Yes</span>
+      </div>
+    </div>
+    <p style="margin:28px 0 0"><a class="arrow" href="/coaches/">Meet the founding cohort <span aria-hidden="true">&rarr;</span></a></p>
+  </div>
+</section>
+
+<section class="dark sect">
+  <div class="glow" style="background:radial-gradient(50% 55% at 82% 25%, rgba(179,157,219,.18), transparent 70%)"></div>
+  <div class="shell" style="position:relative">
+    <div class="grid-2 bottom" style="margin-bottom:clamp(36px,5vh,56px)">
+      <div>
+        <p class="kicker on-dark">yogin<span style="color:var(--on-dark)">ini</span> &middot; the &ldquo;us&rdquo; is the point</p>
+        <h2 data-reveal>Alone on your mat. <em class="soft">Never on your own.</em></h2>
+      </div>
+      <p class="lede" style="margin:0" data-reveal>Practise live with people in other cities, each on your own mat, each with your own coach in your ear. Make friends, share a streak, cheer a first headstand. No rankings, no comparison, just company.</p>
+    </div>
+    <div class="cards">
+      <div class="card card-dark card-lift" style="min-height:230px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="pill" style="color:var(--lav)"><span class="led"></span>SCHEDULED</span>
+          <span class="mono" style="font-size:11px;color:var(--on-dark-5)">30 MIN</span>
+        </div>
+        <h3 style="color:var(--on-dark)">Sunrise flow</h3>
+        <p class="body" style="margin:0;font-size:14px">A gentle vinyasa to start the day. All levels, cameras optional.</p>
+      </div>
+      <div class="card card-dark card-lift" style="min-height:230px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="pill" style="color:var(--lav)"><span class="led"></span>SCHEDULED</span>
+          <span class="mono" style="font-size:11px;color:var(--on-dark-5)">20 MIN</span>
+        </div>
+        <h3 style="color:var(--on-dark)">Desk-back rescue</h3>
+        <p class="body" style="margin:0;font-size:14px">Twists, hip openers and one long forward fold for people who sat all day.</p>
+      </div>
+      <div class="card card-dark card-lift" style="min-height:230px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="pill" style="color:var(--lav)"><span class="led"></span>COACH-HOSTED</span>
+          <span class="mono" style="font-size:11px;color:var(--on-dark-5)">45 MIN</span>
+        </div>
+        <h3 style="color:var(--on-dark)">Moon Walkers</h3>
+        <p class="body" style="margin:0;font-size:14px">Slow yin with a coach hosting. Quiet room, no chat until the end.</p>
+      </div>
+      <div class="card card-dark card-lift" style="min-height:230px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="pill" style="color:var(--lav)"><span class="led"></span>YOURS</span>
+          <span class="mono" style="font-size:11px;color:var(--on-dark-5)">ANY</span>
+        </div>
+        <h3 style="color:var(--on-dark)">Start your own</h3>
+        <p class="body" style="margin:0;font-size:14px">Pick a sequence, set a time, send the link. Two people is enough.</p>
+      </div>
+    </div>
+    
+      <p class="note"><strong>Preview.</strong> Together rooms are a planned feature. The screens are mockups, not live activity, and no numbers here count anything real.</p>
+    <p style="margin:22px 0 0"><a class="arrow" href="/community/">Explore the community <span aria-hidden="true">&rarr;</span></a></p>
+  </div>
+</section>
+
+<section class="sect shell">
+  <div class="grid-2 bottom" style="margin-bottom:clamp(36px,5vh,56px)">
+    <div>
+      <p class="kicker">Streaks and badges</p>
+      <h2 data-reveal>Consistency, <em class="soft">kindly kept.</em></h2>
+    </div>
+    <p class="lede" style="margin:0" data-reveal>Daily streaks with two grace days a month, because flu should not reset a year of practice. No leaderboards, no red charts. Just quiet proof that you keep showing up.</p>
+  </div>
+  <ul class="cards" style="list-style:none;margin:0;padding:0">
+    <li class="card" data-reveal style="gap:10px;padding:24px 22px">
+      <span style="width:26px;height:26px;border-radius:50%;background:var(--lav);display:block"></span>
+      <span style="font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.1">First Breath</span>
+      <span class="fine" style="margin:0">Complete your first session</span>
+    </li>
+    <li class="card" data-reveal style="gap:10px;padding:24px 22px">
+      <span style="width:26px;height:26px;border-radius:50%;background:var(--amber);display:block"></span>
+      <span style="font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.1">Seven Suns</span>
+      <span class="fine" style="margin:0">A 7-day streak</span>
+    </li>
+    <li class="card" data-reveal style="gap:10px;padding:24px 22px">
+      <span style="width:26px;height:26px;border-radius:50%;background:var(--lav);display:block"></span>
+      <span style="font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.1">Steady as Stone</span>
+      <span class="fine" style="margin:0">A 30-day streak</span>
+    </li>
+    <li class="card" data-reveal style="gap:10px;padding:24px 22px">
+      <span style="width:26px;height:26px;border-radius:50%;background:var(--lav);display:block"></span>
+      <span style="font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.1">Balance Keeper</span>
+      <span class="fine" style="margin:0">Tree pose, both sides, clean form</span>
+    </li>
+    <li class="card" data-reveal style="gap:10px;padding:24px 22px">
+      <span style="width:26px;height:26px;border-radius:50%;background:var(--amber);display:block"></span>
+      <span style="font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.1">The Long Exhale</span>
+      <span class="fine" style="margin:0">One session over 60 minutes</span>
+    </li>
+    <li class="card" data-reveal style="gap:10px;padding:24px 22px">
+      <span style="width:26px;height:26px;border-radius:50%;background:var(--lav);display:block"></span>
+      <span style="font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.1">Still Water</span>
+      <span class="fine" style="margin:0">5 hours in restorative poses</span>
+    </li>
+    <li class="card" data-reveal style="gap:10px;padding:24px 22px">
+      <span style="width:26px;height:26px;border-radius:50%;background:var(--lav);display:block"></span>
+      <span style="font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.1">Quiet Mind</span>
+      <span class="fine" style="margin:0">50 hours on the mat, all time</span>
+    </li>
+    <li class="card" data-reveal style="gap:10px;padding:24px 22px">
+      <span style="width:26px;height:26px;border-radius:50%;background:var(--ink);display:block"></span>
+      <span style="font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.1">Coach’s Pick</span>
+      <span class="fine" style="margin:0">Given by hand, by a real coach. The rarest one.</span>
+    </li>
+  </ul>
+</section>
+
+<section class="band sect">
+  <div class="shell">
+    <div class="grid-2 middle">
+      <div>
+        <p class="kicker">Pricing</p>
+        <h2 data-reveal>Less than one class. <em class="soft">Every day of the month.</em></h2>
+        <p class="lede" data-reveal>Membership covers the AI coach and every published pose. Live sessions with a human are paid per hour, at whatever that human charges.</p>
+        <p style="margin:28px 0 0"><a class="arrow" href="/pricing/">Full pricing and how coach bookings work <span aria-hidden="true">&rarr;</span></a></p>
+      </div>
+      <div class="cards-3" style="grid-template-columns:1fr 1fr">
+        <div class="card" data-reveal>
+          <span class="mono" style="font-size:11px;color:var(--muted-2)">TRY IT</span>
+          <span style="font-family:var(--serif);font-size:64px;line-height:1">$3</span>
+          <span class="fine" style="margin:0">for 14 days</span>
+          <p class="body" style="margin:0;font-size:14px">Full access, every pose, every cue. On day 14 it becomes the monthly plan unless you cancel, and we remind you two days before.</p>
+        </div>
+        <div class="card card-dark" data-reveal>
+          <span class="mono" style="font-size:11px;color:var(--lav)">MEMBERSHIP</span>
+          <span style="font-family:var(--serif);font-size:64px;line-height:1;color:var(--on-dark)">$15</span>
+          <span class="fine" style="margin:0">per month</span>
+          <p class="body" style="margin:0;font-size:14px">The AI coach, the core library, every coach&rsquo;s published sequences, streaks and summaries.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark sect">
+  <div class="glow" style="background:radial-gradient(50% 60% at 12% 80%, rgba(179,157,219,.18), transparent 70%)"></div>
+  <div class="shell" style="position:relative">
+    <div class="grid-2">
+      <div>
+        <p class="kicker on-dark">For teachers</p>
+        <h2 data-reveal>Teach the app <em class="soft">your poses.</em></h2>
+        <p class="lede" data-reveal>Hold a pose for the camera a few times. Set how strict each joint should be. Write the cues in your own words. Once reviewed, your students practise with your voice in their ear between sessions, and you walk into every live call already knowing where they struggle.</p>
+        <p class="lede" data-reveal>You set your rate and keep 80% of it. Repeat students with you cost you less, not more.</p>
+        <p style="margin:28px 0 0"><a class="arrow" href="/coaches/#apply">Apply to teach on Yoginini <span aria-hidden="true">&rarr;</span></a></p>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0">
+        <li class="step-row" data-reveal>
+          <span class="step-n">i</span>
+          <div><h4>Record the pose</h4><p class="body" style="margin:0;font-size:15px">Three to five takes. We keep the median angle per joint and drop the outliers.</p></div>
+        </li>
+        <li class="step-row" data-reveal>
+          <span class="step-n">ii</span>
+          <div><h4>Set the tolerances</h4><p class="body" style="margin:0;font-size:15px">Tight where it matters for safety, loose where bodies simply differ.</p></div>
+        </li>
+        <li class="step-row" data-reveal>
+          <span class="step-n">iii</span>
+          <div><h4>Write the cues</h4><p class="body" style="margin:0;font-size:15px">Your words, in your voice. We draft, you edit.</p></div>
+        </li>
+        <li class="step-row" data-reveal>
+          <span class="step-n">iv</span>
+          <div><h4>Review, then publish</h4><p class="body" style="margin:0;font-size:15px">A human checks every pose before a student sees it.</p></div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sect" style="max-width:900px;margin:0 auto;padding-inline:var(--pad)">
+  <h2 style="margin-bottom:clamp(28px,4vh,48px)">Things people ask.</h2>
+  <div class="faq">
+    <details>
+      <summary><span>Does anyone see my camera feed?</span><span class="plus" aria-hidden="true">+</span></summary>
+      <p class="answer">No. Video is processed on your phone and discarded frame by frame. Our servers receive joint angles and scores, never images. There is nothing to watch, even for us.</p>
+    </details>
+    <details>
+      <summary><span>I’m a complete beginner. Will it just tell me I’m wrong all the time?</span><span class="plus" aria-hidden="true">+</span></summary>
+      <p class="answer">Every pose ships with beginner, intermediate and advanced tolerances, and over time the app scales to your own baseline. A tight hamstring is a starting point, not an error.</p>
+    </details>
+    <details>
+      <summary><span>What happens after the $3 trial?</span><span class="plus" aria-hidden="true">+</span></summary>
+      <p class="answer">After 14 days it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap.</p>
+    </details>
+    <details>
+      <summary><span>Are coaching sessions included in the membership?</span><span class="plus" aria-hidden="true">+</span></summary>
+      <p class="answer">No. Coaches set their own hourly rate, and you pay per session. Your membership gives you their published poses and sequences to practise between calls.</p>
+    </details>
+    <details>
+      <summary><span>Can a teacher look at my progress?</span><span class="plus" aria-hidden="true">+</span></summary>
+      <p class="answer">If you want them to. You choose which sessions, poses or your full history to send a coach for review. They see the same angles and scores the app saw, never video, and can reply with notes or a sequence to work on. Sharing is off by default and you can revoke it any time.</p>
+    </details>
+    <details>
+      <summary><span>Do I need special equipment?</span><span class="plus" aria-hidden="true">+</span></summary>
+      <p class="answer">A phone with a camera and somewhere to lean it. Landscape, about two metres away, roughly hip height. The app checks your framing before each session.</p>
+    </details>
+    <details>
+      <summary><span>Which phones?</span><span class="plus" aria-hidden="true">+</span></summary>
+      <p class="answer">iPhone first, Android shortly after. Join the waitlist and tell us which you use.</p>
+    </details>
+    <details>
+      <summary><span>Is Yoginini available yet?</span><span class="plus" aria-hidden="true">+</span></summary>
+      <p class="answer">Not yet. Nothing has shipped, no coaches are signed, and there is no app to download. The waitlist is the only thing that is real today.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+
+<footer class="foot">
+  <div class="foot-cta">
+    <h2 class="big">Roll out the mat. <em class="soft">We&rsquo;ll meet you there.</em></h2>
+    <p class="lede" style="margin:22px auto 0;color:var(--on-dark-2)">Opening first on iPhone, Android after. There is no app to download yet.</p>
+    <p style="margin:28px 0 0"><button class="btn btn-primary" type="button" data-sheet>Join the waitlist</button></p>
+  </div>
+  <div class="foot-bar">
+    <a class="foot-mark" href="/"><span class="dot-mark"></span><span>yogin<em>ini</em></span></a>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/philosophy/">Philosophy</a>
+      <a href="/community/">Community</a>
+      <a href="/coaches/">Coaches</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="mailto:contact@yoginini.us">Contact</a>
+    </nav>
+    <div class="foot-legal">
+      <span>&copy; <span data-year>2026</span> YOGININI &middot; yoginini.us</span>
+      <span class="fz-credit"><a href="https://factory0.ventures" rel="noopener">
+        <svg class="fz-ring" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.1" fill="none" stroke="#FF5A36" stroke-width="1.9" stroke-dasharray="28.7 9.6"/></svg>
+        <span>&copy; 2026 Factory Zero</span>
+      </a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+  <div class="sheet-card">
+    <button class="sheet-close" type="button" data-sheet-close aria-label="Close">&times;</button>
+    <p class="kicker" style="margin:0;color:var(--lav)">Early access</p>
+    <h2 class="sheet-title" id="sheet-title">Save your place <em>on the mat.</em></h2>
+    <form class="form" data-post="/api/waitlist" data-done-text="You are on the list. We will write once, when your mat is ready.">
+      <label class="fine" style="color:var(--on-dark-2)" for="w-name">Your name</label>
+      <input id="w-name" name="name" autocomplete="name" required placeholder="Name">
+      <label class="fine" style="color:var(--on-dark-2)" for="w-email">Email</label>
+      <input id="w-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      <label class="fine" style="color:var(--on-dark-2)" for="w-platform">Which phone do you practise with?</label>
+      <select id="w-platform" name="platform">
+        <option value="iphone">iPhone</option>
+        <option value="android">Android</option>
+        <option value="other">Something else</option>
+      </select>
+      <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:6px">Join the waitlist</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+      <p class="fine" style="margin:2px 0 0">We ask for a name and an email, nothing else. One message when we open, one when you are in. No card, ever, on this site.</p>
+    </form>
+  </div>
+</div>
+<script src="/assets/yog-data.js"></script>
+<script src="/assets/yog-common.js" defer></script>
+</body>
+</html>

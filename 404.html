@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found — Yoginini</title>
+<meta name="description" content="That page is not here.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#100d17">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yoginini">
+<meta property="og:title" content="Not found — Yoginini">
+<meta property="og:description" content="That page is not here.">
+<meta property="og:url" content="https://yoginini.us/">
+<meta property="og:image" content="https://yoginini.us/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Not found — Yoginini">
+<meta name="twitter:description" content="That page is not here.">
+<meta name="twitter:image" content="https://yoginini.us/assets/og.png">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="alternate" type="application/json" href="/yoginini.json" title="Yoginini, machine-readable">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="Yoginini for language models">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Figtree:wght@300;400;500;600&family=Space+Mono&display=swap">
+<link rel="stylesheet" href="/assets/yog.css">
+<style>
+  .sheet-card .form input, .sheet-card .form select {
+    border-color: rgba(236,231,244,.2); background: rgba(236,231,244,.05); color: var(--on-dark);
+  }
+  .sheet-card .form input::placeholder { color: var(--on-dark-5); }
+  .sheet-card .form input:focus, .sheet-card .form select:focus { border-color: var(--lav); }
+  .sheet-card .form select option { background: #100d17; }</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://yoginini.us/#org","name":"Yoginini","url":"https://yoginini.us","email":"contact@yoginini.us","description":"Yoginini is a yoga app that watches your form through your phone camera and speaks corrections out loud, the way a teacher would across the room. Pose tracking runs on the device and video never leaves it. When you want a human, you book a real teacher by the hour.","logo":"https://yoginini.us/assets/icon-512.png","parentOrganization":{"@type":"Organization","name":"Factory Zero","url":"https://factory0.ventures"}},{"@type":"WebSite","@id":"https://yoginini.us/#site","url":"https://yoginini.us","name":"Yoginini","publisher":{"@id":"https://yoginini.us/#org"},"inLanguage":"en"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="dark" style="min-height:100vh;display:flex;flex-direction:column">
+  <div class="glow" style="background:radial-gradient(50% 60% at 50% 90%, rgba(179,157,219,.24), transparent 70%)"></div>
+  
+  <nav class="nav" data-open="false">
+    <a class="wordmark on-dark" href="/"><span class="lotus on-dark"><i></i><i></i><i></i><i></i><i></i><u></u></span><span>yogin<em>ini</em></span></a>
+    <button class="nav-toggle" type="button" aria-controls="nav-links">Menu</button>
+    <div class="nav-links" id="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/philosophy/">Philosophy</a>
+      <a href="/community/">Community</a>
+      <a href="/coaches/">Coaches</a>
+      <a href="/pricing/">Pricing</a>
+      <button class="btn btn-ghost-d" type="button" data-sheet>Join the waitlist</button>
+    </div>
+  </nav>
+  <div style="position:relative;z-index:1;flex:1;display:grid;place-items:center;text-align:center;padding:var(--pad)">
+    <div>
+      <p class="kicker on-dark" style="margin-bottom:0">404</p>
+      <h1 style="margin:24px 0 0">This pose <em class="soft">is not in the library.</em></h1>
+      <p class="lede" style="margin-left:auto;margin-right:auto">The page you were looking for is not here. Come back to the mat.</p>
+      <p style="margin:30px 0 0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+        <a class="btn btn-primary" href="/">Back to the start</a>
+        <a class="btn btn-ghost-d" href="/pricing/" style="padding:15px 26px;font-size:15px">See pricing</a>
+      </p>
+    </div>
+  </div>
+</header>
+<main id="main" hidden></main>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+  <div class="sheet-card">
+    <button class="sheet-close" type="button" data-sheet-close aria-label="Close">&times;</button>
+    <p class="kicker" style="margin:0;color:var(--lav)">Early access</p>
+    <h2 class="sheet-title" id="sheet-title">Save your place <em>on the mat.</em></h2>
+    <form class="form" data-post="/api/waitlist" data-done-text="You are on the list. We will write once, when your mat is ready.">
+      <label class="fine" style="color:var(--on-dark-2)" for="w-name">Your name</label>
+      <input id="w-name" name="name" autocomplete="name" required placeholder="Name">
+      <label class="fine" style="color:var(--on-dark-2)" for="w-email">Email</label>
+      <input id="w-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      <label class="fine" style="color:var(--on-dark-2)" for="w-platform">Which phone do you practise with?</label>
+      <select id="w-platform" name="platform">
+        <option value="iphone">iPhone</option>
+        <option value="android">Android</option>
+        <option value="other">Something else</option>
+      </select>
+      <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:6px">Join the waitlist</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+      <p class="fine" style="margin:2px 0 0">We ask for a name and an email, nothing else. One message when we open, one when you are in. No card, ever, on this site.</p>
+    </form>
+  </div>
+</div>
+<script src="/assets/yog-data.js"></script>
+<script src="/assets/yog-common.js" defer></script>
+</body>
+</html>

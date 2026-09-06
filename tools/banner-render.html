@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yoginini README banner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500&family=Figtree:wght@300;400&family=Space+Mono&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; width: 1280px; height: 400px; overflow: hidden; }
+  body {
+    background: #100d17; color: #ece7f3; font-family: Figtree, system-ui, sans-serif;
+    display: flex; align-items: center; gap: 56px; padding: 0 76px; box-sizing: border-box; position: relative;
+  }
+  .glow {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(40% 70% at 84% 30%, rgba(179,157,219,.30), transparent 68%),
+      radial-gradient(34% 50% at 6% 100%, rgba(224,168,107,.10), transparent 70%);
+  }
+  .mark { position: relative; width: 176px; height: 176px; flex: none; }
+  .copy { position: relative; }
+  h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 68px;
+    line-height: .98; letter-spacing: -.015em; margin: 0;
+  }
+  h1 em { font-style: italic; font-weight: 300; color: #d6cbef; }
+  p { font-size: 20px; line-height: 1.5; color: #b8b2c2; font-weight: 300; margin: 20px 0 0; max-width: 56ch; }
+  .k {
+    font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: .2em;
+    text-transform: uppercase; color: #b39ddb; margin: 0 0 20px;
+  }
+  .rule { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: linear-gradient(90deg, #5e4b9a, #b39ddb 45%, #e0a86b); }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <svg class="mark" viewBox="0 0 120 120" aria-hidden="true">
+    <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#B39DDB" stop-opacity=".38"/>
+      <stop offset="55%"  stop-color="#B39DDB" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#B39DDB" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+    <circle cx="60" cy="68" r="54" fill="url(#halo)"/>
+    <path fill="#5E4B9A" transform="rotate(-52 60 92)" d="M60 92C51 81 48 65 53 51 61 62 63 79 60 92Z"/>
+    <path fill="#5E4B9A" transform="rotate(52 60 92)"  d="M60 92C69 81 72 65 67 51 59 62 57 79 60 92Z"/>
+    <path fill="#B39DDB" transform="rotate(-26 60 92)" d="M60 92C52 79 50 60 55 44 63 57 64 78 60 92Z"/>
+    <path fill="#B39DDB" transform="rotate(26 60 92)"  d="M60 92C68 79 70 60 65 44 57 57 56 78 60 92Z"/>
+    <path fill="#D6CBEF" d="M60 92C53 78 53 55 60 38 67 55 67 78 60 92Z"/>
+    <path fill="none" stroke="#D6CBEF" stroke-opacity=".6" stroke-width="2.6" stroke-linecap="round" d="M40 94A20 9 0 0 0 80 94"/>
+  </svg>
+  <div class="copy">
+    <p class="k">Yoginini &middot; yoginini.us &middot; FZ-004</p>
+    <h1>A yoga teacher <em>who can see you.</em></h1>
+    <p>On-device pose tracking, spoken corrections, and real teachers by the hour. No video ever leaves the phone.</p>
+  </div>
+  <div class="rule"></div>
+</body>
+</html>

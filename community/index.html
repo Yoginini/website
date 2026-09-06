@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community — Yoginini</title>
+<meta name="description" content="Practise live with people in other cities, share a streak with a friend, join a circle. No leaderboards, friends-only by default.">
+<link rel="canonical" href="https://yoginini.us/community/">
+<meta name="theme-color" content="#100d17">
+<meta name="color-scheme" content="light">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yoginini">
+<meta property="og:title" content="Community — Yoginini">
+<meta property="og:description" content="Practise live with people in other cities, share a streak with a friend, join a circle. No leaderboards, friends-only by default.">
+<meta property="og:url" content="https://yoginini.us/community/">
+<meta property="og:image" content="https://yoginini.us/assets/og-community.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Community — Yoginini">
+<meta name="twitter:description" content="Practise live with people in other cities, share a streak with a friend, join a circle. No leaderboards, friends-only by default.">
+<meta name="twitter:image" content="https://yoginini.us/assets/og-community.png">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="alternate" type="application/json" href="/yoginini.json" title="Yoginini, machine-readable">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="Yoginini for language models">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Figtree:wght@300;400;500;600&family=Space+Mono&display=swap">
+<link rel="stylesheet" href="/assets/yog.css">
+<style>
+  .sheet-card .form input, .sheet-card .form select {
+    border-color: rgba(236,231,244,.2); background: rgba(236,231,244,.05); color: var(--on-dark);
+  }
+  .sheet-card .form input::placeholder { color: var(--on-dark-5); }
+  .sheet-card .form input:focus, .sheet-card .form select:focus { border-color: var(--lav); }
+  .sheet-card .form select option { background: #100d17; }</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://yoginini.us/#org","name":"Yoginini","url":"https://yoginini.us","email":"contact@yoginini.us","description":"Yoginini is a yoga app that watches your form through your phone camera and speaks corrections out loud, the way a teacher would across the room. Pose tracking runs on the device and video never leaves it. When you want a human, you book a real teacher by the hour.","logo":"https://yoginini.us/assets/icon-512.png","parentOrganization":{"@type":"Organization","name":"Factory Zero","url":"https://factory0.ventures"}},{"@type":"WebSite","@id":"https://yoginini.us/#site","url":"https://yoginini.us","name":"Yoginini","publisher":{"@id":"https://yoginini.us/#org"},"inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yoginini.us/"},{"@type":"ListItem","position":2,"name":"Community","item":"https://yoginini.us/community/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="dark">
+  <div class="glow" style="background:radial-gradient(60% 60% at 80% 30%, rgba(179,157,219,.22), transparent 70%), radial-gradient(40% 40% at 10% 100%, rgba(224,168,107,.1), transparent 70%)"></div>
+  
+  <nav class="nav" data-open="false">
+    <a class="wordmark on-dark" href="/"><span class="lotus on-dark"><i></i><i></i><i></i><i></i><i></i><u></u></span><span>yogin<em>ini</em></span></a>
+    <button class="nav-toggle" type="button" aria-controls="nav-links">Menu</button>
+    <div class="nav-links" id="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/philosophy/">Philosophy</a>
+      <a href="/community/" aria-current="page">Community</a>
+      <a href="/coaches/">Coaches</a>
+      <a href="/pricing/">Pricing</a>
+      <button class="btn btn-ghost-d" type="button" data-sheet>Join the waitlist</button>
+    </div>
+  </nav>
+  <div class="shell" style="position:relative;z-index:1;padding-block:clamp(32px,6vh,80px) clamp(56px,9vh,104px)">
+    <p class="kicker on-dark" style="margin-bottom:0;animation:rise .9s both">yogin<span style="color:var(--on-dark)">ini</span>.us</p>
+    <h1 style="margin-top:24px;max-width:16ch;animation:rise 1s .1s both">Your mat, your room. <em class="soft">Everyone else, a breath away.</em></h1>
+    <p class="lede" style="animation:rise 1s .22s both">Practise live with people in other cities. Make friends who roll out the mat when you do. Share a streak, share your progress, and keep each other going. Nothing ranked, nothing public unless you say so.</p>
+    
+      <p class="fine" style="margin:26px 0 0;display:inline-flex;align-items:center;gap:9px">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--amber);display:inline-block;flex:none"></span>
+        In development. Nothing has shipped yet, no coaches are signed, and there is no app to download &mdash; the waitlist is the only thing that is real today.
+      </p>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="sect shell" id="rooms">
+  <div class="grid-2 bottom" style="margin-bottom:clamp(40px,6vh,64px)">
+    <div>
+      <p class="kicker">Together rooms</p>
+      <h2 data-reveal>Same sequence, same minute, <em class="soft">different living rooms.</em></h2>
+    </div>
+    <p class="lede" style="margin:0" data-reveal>Join a scheduled room or open one for your friends. Everyone follows the same flow in sync while the AI coach corrects each person privately in their own ear. Nobody is called out in front of the group.</p>
+  </div>
+  <div class="cards">
+    <div class="card card-lift" style="min-height:230px" data-reveal>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="pill" style="color:var(--purple)"><span class="led"></span>SCHEDULED</span>
+        <span class="mono" style="font-size:11px;color:var(--muted-2)">30 MIN</span>
+      </div>
+      <h3>Sunrise flow</h3>
+      <p class="body" style="margin:0;font-size:14px">A gentle vinyasa to start the day. All levels, cameras optional.</p>
+    </div>
+    <div class="card card-lift" style="min-height:230px" data-reveal>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="pill" style="color:var(--purple)"><span class="led"></span>SCHEDULED</span>
+        <span class="mono" style="font-size:11px;color:var(--muted-2)">20 MIN</span>
+      </div>
+      <h3>Desk-back rescue</h3>
+      <p class="body" style="margin:0;font-size:14px">Twists, hip openers and one long forward fold for people who sat all day.</p>
+    </div>
+    <div class="card card-lift" style="min-height:230px" data-reveal>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="pill" style="color:var(--purple)"><span class="led"></span>COACH-HOSTED</span>
+        <span class="mono" style="font-size:11px;color:var(--muted-2)">45 MIN</span>
+      </div>
+      <h3>Moon Walkers</h3>
+      <p class="body" style="margin:0;font-size:14px">Slow yin with a coach hosting. Quiet room, no chat until the end.</p>
+    </div>
+    <div class="card card-lift" style="min-height:230px" data-reveal>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="pill" style="color:var(--purple)"><span class="led"></span>YOURS</span>
+        <span class="mono" style="font-size:11px;color:var(--muted-2)">ANY</span>
+      </div>
+      <h3>Start your own</h3>
+      <p class="body" style="margin:0;font-size:14px">Pick a sequence, set a time, send the link. Two people is enough.</p>
+    </div>
+  </div>
+  
+      <p class="note"><strong>Preview.</strong> Together rooms are a planned feature. The screens are mockups, not live activity, and no numbers here count anything real.</p>
+  <div class="cards-3" style="margin-top:40px">
+    <div class="step-row" data-reveal>
+      <span class="step-n">i</span>
+      <div><h4>Camera tile, or just a breathing dot</h4><p class="body" style="margin:0;font-size:14px">Show yourself to the room, or appear as a name and a pulse. Pose tracking works either way; only you see your corrections.</p></div>
+    </div>
+    <div class="step-row" data-reveal>
+      <span class="step-n">ii</span>
+      <div><h4>Rooms of two to twenty</h4><p class="body" style="margin:0;font-size:14px">A quiet pair session with a friend, or an open sunrise flow. Coaches can host bigger rooms as group classes.</p></div>
+    </div>
+    <div class="step-row" data-reveal>
+      <span class="step-n">iii</span>
+      <div><h4>The room stays open</h4><p class="body" style="margin:0;font-size:14px">After savasana the room becomes a chat. Set the next time, share how it went, or just leave a wave.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band sect">
+  <div class="shell grid-2 middle">
+    <div>
+      <p class="kicker">Friends</p>
+      <h2 data-reveal>Find the people who practise <em class="soft">when you do.</em></h2>
+      <p class="lede" data-reveal>We suggest people by rhythm rather than by follower count: the same time of day, a similar level, poses you are both working on. Say hello, practise together once, and decide from there.</p>
+      <p class="lede" data-reveal>Invite friends from outside with a link. When they join, you are connected from the first session.</p>
+    </div>
+    <div class="card" data-reveal>
+      <p class="mono" style="font-size:11px;color:var(--purple);margin:0">WHAT YOU SHARE</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--band)">
+        <span><span style="font-size:15px">Streak</span><br><span class="fine">Friends</span></span>
+        <button type="button" data-toggle aria-pressed="true" aria-label="Streak" style="width:42px;height:24px;border-radius:999px;border:0;background:var(--purple);position:relative;flex:none;transition:background .3s">
+          <span style="position:absolute;top:3px;left:21px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .3s"></span>
+        </button>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--band)">
+        <span><span style="font-size:15px">Badges</span><br><span class="fine">Friends</span></span>
+        <button type="button" data-toggle aria-pressed="true" aria-label="Badges" style="width:42px;height:24px;border-radius:999px;border:0;background:var(--purple);position:relative;flex:none;transition:background .3s">
+          <span style="position:absolute;top:3px;left:21px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .3s"></span>
+        </button>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--band)">
+        <span><span style="font-size:15px">Poses mastered</span><br><span class="fine">Friends</span></span>
+        <button type="button" data-toggle aria-pressed="false" aria-label="Poses mastered" style="width:42px;height:24px;border-radius:999px;border:0;background:var(--line);position:relative;flex:none;transition:background .3s">
+          <span style="position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .3s"></span>
+        </button>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--band)">
+        <span><span style="font-size:15px">Weekly minutes</span><br><span class="fine">Circle</span></span>
+        <button type="button" data-toggle aria-pressed="false" aria-label="Weekly minutes" style="width:42px;height:24px;border-radius:999px;border:0;background:var(--line);position:relative;flex:none;transition:background .3s">
+          <span style="position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .3s"></span>
+        </button>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--band)">
+        <span><span style="font-size:15px">Session history</span><br><span class="fine">A coach you choose</span></span>
+        <button type="button" data-toggle aria-pressed="false" aria-label="Session history" style="width:42px;height:24px;border-radius:999px;border:0;background:var(--line);position:relative;flex:none;transition:background .3s">
+          <span style="position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .3s"></span>
+        </button>
+      </div>
+      <p class="fine" style="margin:8px 0 0">Everything is off until you turn it on. Video is never an option, because none exists.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sect shell">
+  <div class="grid-2 bottom" style="margin-bottom:clamp(40px,6vh,64px)">
+    <div>
+      <p class="kicker">Shared progress</p>
+      <h2 data-reveal>Show your friends how far you have come. <em class="soft">Only your friends.</em></h2>
+    </div>
+    <p class="lede" style="margin:0" data-reveal>Shared streaks, mastered poses and badges appear in a small circle of people you chose. Cheers are counted in breaths. There is no leaderboard to climb, so nobody forces a pose to win one.</p>
+  </div>
+  <div class="cards-3">
+    <div class="card card-dark" style="min-height:320px" data-reveal>
+      <p class="mono" style="font-size:11px;color:var(--lav);margin:0">SHARED STREAK</p>
+      <p class="body" style="margin:0">A shared streak only breaks if you both miss a day. One of you always has a reason to roll out the mat.</p>
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:auto" aria-hidden="true">
+        <span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--amber);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--amber);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--amber);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--amber);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:var(--lav);border:1px solid transparent;display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:transparent;border:1px solid rgba(236,231,244,.18);display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:transparent;border:1px solid rgba(236,231,244,.18);display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:transparent;border:1px solid rgba(236,231,244,.18);display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:transparent;border:1px solid rgba(236,231,244,.18);display:block"></span><span style="aspect-ratio:1;border-radius:6px;background:transparent;border:1px solid rgba(236,231,244,.18);display:block"></span>
+      </div>
+    </div>
+    <div class="card" style="min-height:320px" data-reveal>
+      <p class="mono" style="font-size:11px;color:var(--purple);margin:0">GRACE DAYS</p>
+      <h3>Two a month, no questions.</h3>
+      <p class="body" style="margin:0;font-size:15px">Flu, a late flight, a bad week. Two days a month are forgiven automatically, and the streak survives. You do not have to ask, and nobody is told.</p>
+      <p class="body" style="margin:auto 0 0;font-size:15px">Pause for up to three months and the streak is frozen rather than lost.</p>
+    </div>
+    <div class="card" style="min-height:320px" data-reveal>
+      <p class="mono" style="font-size:11px;color:var(--purple);margin:0">CHEERS, NOT LIKES</p>
+      <h3>Counted in breaths.</h3>
+      <p class="body" style="margin:0;font-size:15px">When a friend does something worth marking, you send a breath. There is no running total on anyone&rsquo;s profile, so there is nothing to farm and nothing to lose.</p>
+      <p class="body" style="margin:auto 0 0;font-size:15px">No follower counts exist anywhere in the app.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark sect">
+  <div class="glow" style="background:radial-gradient(50% 60% at 15% 80%, rgba(179,157,219,.18), transparent 70%)"></div>
+  <div class="shell" style="position:relative">
+    <div class="grid-2 bottom" style="margin-bottom:clamp(40px,6vh,64px)">
+      <div>
+        <p class="kicker on-dark">Circles</p>
+        <h2 data-reveal>Small groups with <em class="soft">a shared reason.</em></h2>
+      </div>
+      <p class="lede" style="margin:0" data-reveal>Circles are groups of up to fifty around a time of day, a goal or a coach. Each has its own rooms, chat and a monthly challenge nobody is ranked on.</p>
+    </div>
+    <div class="cards">
+      <div class="card card-dark card-lift" style="min-height:180px" data-reveal>
+        <span class="mono" style="font-size:10px;color:var(--on-dark-4)">TIME OF DAY</span>
+        <h3 style="color:var(--on-dark)">Sunrise Warriors</h3>
+        <p class="body" style="margin:0;font-size:14px">Before 8am, wherever you are.</p>
+      </div>
+      <div class="card card-dark card-lift" style="min-height:180px" data-reveal>
+        <span class="mono" style="font-size:10px;color:var(--on-dark-4)">TIME OF DAY</span>
+        <h3 style="color:var(--on-dark)">Moon Walkers</h3>
+        <p class="body" style="margin:0;font-size:14px">After 8pm. Slow, quiet, mostly yin.</p>
+      </div>
+      <div class="card card-dark card-lift" style="min-height:180px" data-reveal>
+        <span class="mono" style="font-size:10px;color:var(--on-dark-4)">GOAL</span>
+        <h3 style="color:var(--on-dark)">First Headstand</h3>
+        <p class="body" style="margin:0;font-size:14px">Twelve weeks of prep, together.</p>
+      </div>
+      <div class="card card-dark card-lift" style="min-height:180px" data-reveal>
+        <span class="mono" style="font-size:10px;color:var(--on-dark-4)">GOAL</span>
+        <h3 style="color:var(--on-dark)">Tight Hamstrings Club</h3>
+        <p class="body" style="margin:0;font-size:14px">Forward folds without shame.</p>
+      </div>
+      <div class="card card-dark card-lift" style="min-height:180px" data-reveal>
+        <span class="mono" style="font-size:10px;color:var(--on-dark-4)">COACH</span>
+        <h3 style="color:var(--on-dark)">A coach’s students</h3>
+        <p class="body" style="margin:0;font-size:14px">Everyone practising with the same teacher.</p>
+      </div>
+      <div class="card card-dark card-lift" style="min-height:180px" data-reveal>
+        <span class="mono" style="font-size:10px;color:var(--on-dark-4)">PLACE</span>
+        <h3 style="color:var(--on-dark)">Your city</h3>
+        <p class="body" style="margin:0;font-size:14px">Online rooms, and a park meet-up when the weather allows.</p>
+      </div>
+    </div>
+    
+      <p class="note"><strong>Preview.</strong> Circles are a planned feature and none exist yet. The screens are mockups, not live activity, and no numbers here count anything real.</p>
+  </div>
+</section>
+
+<section class="sect" style="max-width:900px;margin:0 auto;padding-inline:var(--pad)">
+  <h2 style="margin-bottom:clamp(28px,4vh,48px)">How we keep it kind.</h2>
+  <ol class="rows" style="list-style:none;margin:0;padding:0">
+    <li style="padding:22px 26px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline">
+      <span class="mono" style="font-size:11px;color:var(--purple)">01</span>
+      <div><span style="font-size:17px;font-weight:500">No leaderboards, ever</span><p class="body" style="margin:4px 0 0;font-size:14px">Rankings push people to force poses, and forcing poses is how yoga injures people. Progress is shared, never ranked.</p></div>
+    </li>
+    <li style="padding:22px 26px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline">
+      <span class="mono" style="font-size:11px;color:var(--purple)">02</span>
+      <div><span style="font-size:17px;font-weight:500">Friends only by default</span><p class="body" style="margin:4px 0 0;font-size:14px">Nothing you do is visible to strangers unless you turn it on. Rooms are private unless the host opens them.</p></div>
+    </li>
+    <li style="padding:22px 26px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline">
+      <span class="mono" style="font-size:11px;color:var(--purple)">03</span>
+      <div><span style="font-size:17px;font-weight:500">Corrections stay private</span><p class="body" style="margin:4px 0 0;font-size:14px">In a room, the coach speaks only to you. Nobody else hears what you are working on.</p></div>
+    </li>
+    <li style="padding:22px 26px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline">
+      <span class="mono" style="font-size:11px;color:var(--purple)">04</span>
+      <div><span style="font-size:17px;font-weight:500">Cheer, don’t compare</span><p class="body" style="margin:4px 0 0;font-size:14px">Reactions are breaths, not likes. There are no counts on profiles.</p></div>
+    </li>
+    <li style="padding:22px 26px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline">
+      <span class="mono" style="font-size:11px;color:var(--purple)">05</span>
+      <div><span style="font-size:17px;font-weight:500">Leave any time</span><p class="body" style="margin:4px 0 0;font-size:14px">Mute a room, leave a circle, unfriend quietly. Nobody is notified.</p></div>
+    </li>
+  </ol>
+</section>
+
+</main>
+
+
+<footer class="foot">
+  <div class="foot-cta">
+    <h2 class="big">Save a place on the mat <em class="soft">next to us.</em></h2>
+    
+    <p style="margin:28px 0 0"><button class="btn btn-primary" type="button" data-sheet>Join the waitlist</button></p>
+  </div>
+  <div class="foot-bar">
+    <a class="foot-mark" href="/"><span class="dot-mark"></span><span>yogin<em>ini</em></span></a>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/philosophy/">Philosophy</a>
+      <a href="/community/">Community</a>
+      <a href="/coaches/">Coaches</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="mailto:contact@yoginini.us">Contact</a>
+    </nav>
+    <div class="foot-legal">
+      <span>&copy; <span data-year>2026</span> YOGININI &middot; yoginini.us</span>
+      <span class="fz-credit"><a href="https://factory0.ventures" rel="noopener">
+        <svg class="fz-ring" viewBox="0 0 16 16" width="11" height="11" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.1" fill="none" stroke="#FF5A36" stroke-width="1.9" stroke-dasharray="28.7 9.6"/></svg>
+        <span>&copy; 2026 Factory Zero</span>
+      </a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+  <div class="sheet-card">
+    <button class="sheet-close" type="button" data-sheet-close aria-label="Close">&times;</button>
+    <p class="kicker" style="margin:0;color:var(--lav)">Early access</p>
+    <h2 class="sheet-title" id="sheet-title">Save your place <em>on the mat.</em></h2>
+    <form class="form" data-post="/api/waitlist" data-done-text="You are on the list. We will write once, when your mat is ready.">
+      <label class="fine" style="color:var(--on-dark-2)" for="w-name">Your name</label>
+      <input id="w-name" name="name" autocomplete="name" required placeholder="Name">
+      <label class="fine" style="color:var(--on-dark-2)" for="w-email">Email</label>
+      <input id="w-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      <label class="fine" style="color:var(--on-dark-2)" for="w-platform">Which phone do you practise with?</label>
+      <select id="w-platform" name="platform">
+        <option value="iphone">iPhone</option>
+        <option value="android">Android</option>
+        <option value="other">Something else</option>
+      </select>
+      <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:6px">Join the waitlist</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+      <p class="fine" style="margin:2px 0 0">We ask for a name and an email, nothing else. One message when we open, one when you are in. No card, ever, on this site.</p>
+    </form>
+  </div>
+</div>
+<script src="/assets/yog-data.js"></script>
+<script src="/assets/yog-common.js" defer></script>
+</body>
+</html>

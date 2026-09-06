@@ -1,0 +1,6 @@
+# Yoginini security contact
+Contact: mailto:contact@yoginini.us
+Contact: https://github.com/Yoginini
+Expires: 2027-09-06T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://yoginini.us/.well-known/security.txt

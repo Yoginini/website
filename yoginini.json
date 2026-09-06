@@ -1,0 +1,357 @@
+{
+  "$schema": "https://yoginini.us/yoginini.json",
+  "generated": "2026-09-06",
+  "name": "Yoginini",
+  "url": "https://yoginini.us",
+  "tagline": "A yoga teacher who can see you.",
+  "summary": "Yoginini is a yoga app that watches your form through your phone camera and speaks corrections out loud, the way a teacher would across the room. Pose tracking runs on the device and video never leaves it. When you want a human, you book a real teacher by the hour.",
+  "contact": "contact@yoginini.us",
+  "parentOrganization": {
+    "name": "Factory Zero",
+    "id": "FZ-004",
+    "url": "https://factory0.ventures"
+  },
+  "status": {
+    "launched": false,
+    "note": "Pre-launch. No app has shipped, no coaches are signed, no accounts exist and nothing can be purchased.",
+    "platform": "iPhone first, Android after",
+    "waitlistDelivers": false,
+    "coachesSigned": 0,
+    "posesPublished": 0,
+    "appStoreUrl": null,
+    "playStoreUrl": null
+  },
+  "product": {
+    "category": "Yoga app with on-device computer-vision form correction",
+    "howItWorks": [
+      {
+        "step": "01",
+        "title": "Learn the shape",
+        "detail": "A short explanation of the pose, what it should feel like, and the one or two things people usually get wrong."
+      },
+      {
+        "step": "02",
+        "title": "Prop up your phone",
+        "detail": "We walk you through distance, height and angle the first time. Most bad sessions are framing problems, so we fix framing first."
+      },
+      {
+        "step": "03",
+        "title": "Hold, and listen",
+        "detail": "The camera tracks 33 points on your body and compares your joint angles to the reference. When something drifts, a calm voice says so."
+      }
+    ],
+    "landmarksTracked": 33,
+    "processing": "on-device",
+    "videoUploaded": false,
+    "dataLeavingDevice": [
+      "joint angles",
+      "pose scores",
+      "session metadata"
+    ],
+    "coreLibraryPoses": [
+      {
+        "name": "Mountain",
+        "sanskrit": "Tadasana"
+      },
+      {
+        "name": "Downward dog",
+        "sanskrit": "Adho Mukha Svanasana"
+      },
+      {
+        "name": "Warrior I",
+        "sanskrit": "Virabhadrasana I"
+      },
+      {
+        "name": "Warrior II",
+        "sanskrit": "Virabhadrasana II"
+      },
+      {
+        "name": "Triangle",
+        "sanskrit": "Trikonasana"
+      },
+      {
+        "name": "Tree",
+        "sanskrit": "Vrksasana"
+      },
+      {
+        "name": "Chair",
+        "sanskrit": "Utkatasana"
+      },
+      {
+        "name": "Low lunge",
+        "sanskrit": "Anjaneyasana"
+      },
+      {
+        "name": "Forward fold",
+        "sanskrit": "Uttanasana"
+      },
+      {
+        "name": "Bridge",
+        "sanskrit": "Setu Bandha Sarvangasana"
+      },
+      {
+        "name": "Pigeon",
+        "sanskrit": "Eka Pada Rajakapotasana"
+      },
+      {
+        "name": "Cobra",
+        "sanskrit": "Bhujangasana"
+      },
+      {
+        "name": "Plank",
+        "sanskrit": "Phalakasana"
+      },
+      {
+        "name": "Chaturanga",
+        "sanskrit": "Chaturanga Dandasana"
+      },
+      {
+        "name": "Child's pose",
+        "sanskrit": "Balasana"
+      },
+      {
+        "name": "Seated twist",
+        "sanskrit": "Ardha Matsyendrasana"
+      },
+      {
+        "name": "Corpse",
+        "sanskrit": "Savasana"
+      },
+      {
+        "name": "Warrior III",
+        "sanskrit": "Virabhadrasana III"
+      },
+      {
+        "name": "High lunge",
+        "sanskrit": "Utthita Ashwa Sanchalanasana"
+      },
+      {
+        "name": "Upward dog",
+        "sanskrit": "Urdhva Mukha Svanasana"
+      }
+    ],
+    "posesPublished": 0
+  },
+  "pricing": {
+    "currency": "USD",
+    "trial": {
+      "price": 3,
+      "period": "14 days",
+      "rollsIntoMembership": true
+    },
+    "membership": {
+      "price": 15,
+      "period": "month",
+      "includes": [
+        "Live camera coaching with spoken cues",
+        "The 20-pose core library, reviewed by teachers",
+        "Every coach's published poses and sequences",
+        "Session summaries and weekly progress notes",
+        "Streaks, badges, friends",
+        "Cancel any time"
+      ]
+    },
+    "coaching": {
+      "rateBand": "$50–85 / hr",
+      "coachKeeps": "80%",
+      "repeatShare": "10–12%",
+      "membershipRequired": true,
+      "processor": "Stripe"
+    },
+    "purchasable": false,
+    "purchasableNote": "No checkout exists on this site. These are intended launch prices."
+  },
+  "coaches": {
+    "signed": 0,
+    "profilesPublished": 0,
+    "note": "No coach profiles exist. The seats below are the founding cohort we are recruiting for, not people.",
+    "seats": [
+      {
+        "style": "Vinyasa",
+        "tags": [
+          "Vinyasa",
+          "Beginners"
+        ],
+        "indicativeRate": "$55–70 / hr",
+        "lookingFor": "Alignment for beginners. Someone who slows a shape down until it makes sense in an unfamiliar body."
+      },
+      {
+        "style": "Ashtanga",
+        "tags": [
+          "Ashtanga",
+          "Inversions"
+        ],
+        "indicativeRate": "$70–85 / hr",
+        "lookingFor": "The primary series, strength and inversions. Precision, and patience with how long a handstand takes to arrive."
+      },
+      {
+        "style": "Restorative",
+        "tags": [
+          "Restorative",
+          "Prenatal"
+        ],
+        "indicativeRate": "$50–65 / hr",
+        "lookingFor": "Tired bodies and busy nervous systems. Long holds, props, and permission to do less."
+      },
+      {
+        "style": "Hatha",
+        "tags": [
+          "Hatha",
+          "Breathwork"
+        ],
+        "indicativeRate": "$60–75 / hr",
+        "lookingFor": "Breath-led practice and meditation. Standing poses taught as places to be still."
+      },
+      {
+        "style": "Athletes",
+        "tags": [
+          "Vinyasa",
+          "Athletes"
+        ],
+        "indicativeRate": "$60–80 / hr",
+        "lookingFor": "Runners and cyclists whose hamstrings have opinions. Sequences you can finish after a long ride."
+      },
+      {
+        "style": "Yin",
+        "tags": [
+          "Yin",
+          "Beginners"
+        ],
+        "indicativeRate": "$50–65 / hr",
+        "lookingFor": "Hips and lower backs, three-minute holds, a quiet voice. For people who sit at a desk all day."
+      }
+    ],
+    "applyUrl": "https://yoginini.us/coaches/#apply"
+  },
+  "community": {
+    "status": "planned",
+    "features": [
+      "together rooms",
+      "friends",
+      "shared streaks",
+      "circles"
+    ],
+    "leaderboards": false,
+    "defaultVisibility": "friends only, every scope off until enabled"
+  },
+  "principles": [
+    {
+      "title": "The phone watches. Nobody else does.",
+      "detail": "Every frame is analysed on the device and discarded. We store angles and scores, never video. A practice done in a bedroom deserves that."
+    },
+    {
+      "title": "Say less.",
+      "detail": "One cue at a time, never off a single frame, never twice in five seconds. Silence is part of teaching. An app that will not stop talking has not understood the room."
+    },
+    {
+      "title": "Safety before beauty.",
+      "detail": "If three things are off, you hear the one that protects your knee or your lower back. Shape can wait. Joints cannot."
+    },
+    {
+      "title": "Bodies differ. Tolerances should too.",
+      "detail": "A tight hamstring is a starting point, not a mistake. Every pose ships in beginner, intermediate and advanced tolerances, and adapts to your own baseline."
+    },
+    {
+      "title": "Humans review every pose.",
+      "detail": "A badly captured reference would teach thousands of people bad form. Nothing a coach records goes live until another teacher has checked it."
+    },
+    {
+      "title": "Consistency over intensity.",
+      "detail": "Streaks with grace days, no leaderboards, no red charts. Yoga rewards the person who shows up on a dull Tuesday, and so do we."
+    },
+    {
+      "title": "The machine serves the teacher.",
+      "detail": "The AI fills the days between classes. It hands what it learned to a human coach, who does what no model can: notice you."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does anyone see my camera feed?",
+      "answer": "No. Video is processed on your phone and discarded frame by frame. Our servers receive joint angles and scores, never images. There is nothing to watch, even for us."
+    },
+    {
+      "question": "I'm a complete beginner. Will it just tell me I'm wrong all the time?",
+      "answer": "Every pose ships with beginner, intermediate and advanced tolerances, and over time the app scales to your own baseline. A tight hamstring is a starting point, not an error."
+    },
+    {
+      "question": "What happens after the $3 trial?",
+      "answer": "After 14 days it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap."
+    },
+    {
+      "question": "Are coaching sessions included in the membership?",
+      "answer": "No. Coaches set their own hourly rate, and you pay per session. Your membership gives you their published poses and sequences to practise between calls."
+    },
+    {
+      "question": "Can a teacher look at my progress?",
+      "answer": "If you want them to. You choose which sessions, poses or your full history to send a coach for review. They see the same angles and scores the app saw, never video, and can reply with notes or a sequence to work on. Sharing is off by default and you can revoke it any time."
+    },
+    {
+      "question": "Do I need special equipment?",
+      "answer": "A phone with a camera and somewhere to lean it. Landscape, about two metres away, roughly hip height. The app checks your framing before each session."
+    },
+    {
+      "question": "Which phones?",
+      "answer": "iPhone first, Android shortly after. Join the waitlist and tell us which you use."
+    },
+    {
+      "question": "Is Yoginini available yet?",
+      "answer": "Not yet. Nothing has shipped, no coaches are signed, and there is no app to download. The waitlist is the only thing that is real today."
+    },
+    {
+      "question": "What exactly happens on day 14?",
+      "answer": "Your $3 trial becomes the $15 monthly membership. You'll get an email on day 12 with a one-tap cancel link. Cancel before day 14 and you pay nothing more."
+    },
+    {
+      "question": "Is the price the same in the app and on the web?",
+      "answer": "Yes, $15 either way. App stores take a cut of in-app subscriptions, so subscribing on the web leaves more for building the product. We'd rather you didn't have to think about it."
+    },
+    {
+      "question": "Do coaches charge extra for their poses and sequences?",
+      "answer": "No. Anything a coach publishes to the library is included in membership. Coaches earn from live sessions, not from gating content."
+    },
+    {
+      "question": "How are coach payments handled?",
+      "answer": "Through Stripe. You pay per session at the coach's hourly rate; the coach receives 80% and is paid out automatically. Refunds for missed or cancelled sessions follow each coach's stated policy."
+    },
+    {
+      "question": "Can I pause instead of cancelling?",
+      "answer": "Yes, for up to three months. Your streak is protected while paused, and your history is kept."
+    },
+    {
+      "question": "When does any of this start charging?",
+      "answer": "Not yet. There is no app and no payment form on this site. Nothing can charge you today, and the waitlist never asks for a card."
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://yoginini.us/",
+      "title": "Yoginini — a yoga teacher who can see you",
+      "description": "Yoginini watches your yoga form through your phone camera and speaks corrections out loud. Pose tracking runs on the device; video never leaves it. Book real teachers by the hour."
+    },
+    {
+      "url": "https://yoginini.us/philosophy/",
+      "title": "Philosophy — Yoginini",
+      "description": "Why Yoginini is purple, what the crown chakra has to do with it, and the seven rules that decide how the app behaves."
+    },
+    {
+      "url": "https://yoginini.us/community/",
+      "title": "Community — Yoginini",
+      "description": "Practise live with people in other cities, share a streak with a friend, join a circle. No leaderboards, friends-only by default."
+    },
+    {
+      "url": "https://yoginini.us/coaches/",
+      "title": "Coaches — Yoginini",
+      "description": "Real yoga teachers, booked by the hour. Coaches set their own rate and keep 80%. Apply to join the founding cohort."
+    },
+    {
+      "url": "https://yoginini.us/pricing/",
+      "title": "Pricing — Yoginini",
+      "description": "$3 for 14 days, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of it."
+    },
+    {
+      "url": "https://yoginini.us/privacy/",
+      "title": "Privacy — Yoginini",
+      "description": "What Yoginini stores and what it does not. Video is analysed on your phone and discarded; only joint angles and scores leave the device."
+    }
+  ]
+}

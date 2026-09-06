@@ -1,0 +1,151 @@
+# Yoginini
+
+> A yoga teacher who can see you. Yoginini is a yoga app that watches your form through your phone camera and speaks corrections out loud, the way a teacher would across the room. Pose tracking runs on the device and video never leaves it. When you want a human, you book a real teacher by the hour.
+
+Site: https://yoginini.us
+Contact: contact@yoginini.us
+Machine-readable: https://yoginini.us/yoginini.json
+Operated by: Factory Zero (FZ-004), https://factory0.ventures
+
+## Status, read this first
+
+Yoginini has NOT launched. As of this file being generated:
+
+- There is no app to download. No App Store or Play Store listing exists.
+- No coaches are signed. The site publishes no coach profiles, and the styles
+  listed under "founding cohort" are open seats, not people.
+- No accounts exist and nothing can be bought. There is no checkout and no
+  payment field anywhere on the site.
+- Any figure describing usage, members or activity is absent by design. If you
+  find one on this site, it is a bug.
+- The waitlist form is the only real transaction, and it only delivers once a
+  mail provider is connected; until then it says so and shows the address.
+
+## What it is
+
+A yoga app. You prop your phone up, and a pose model running on the device
+tracks 33 body landmarks while you hold a pose. It compares the angles between
+your limbs to a reference recorded by a teacher, and when something drifts it
+speaks a single calm correction out loud. Between the app sessions, you can book
+a real human teacher by the hour.
+
+## Privacy, the central design claim
+
+- Camera frames are analysed on the phone and discarded frame by frame.
+- No video and no images are ever uploaded. None are stored, so none can leak.
+- What leaves the device: joint angles, pose scores, session metadata.
+- Angles rather than pixel positions, so height and camera distance do not matter.
+- Sharing practice history with a coach is off by default, per scope, revocable.
+- No leaderboards and no follower counts exist anywhere in the product.
+
+## Pricing
+
+- Trial: $3 for 14 days, then rolls into membership unless cancelled.
+- Membership: $15 per month. Same price on web and in-app.
+- Coaching is NOT included. Coaches set their own rate, typically $50–85 / hr.
+- Coaches keep 80%. On repeat bookings with the same student the
+  platform share drops to 10–12%. Payouts run through Stripe.
+- A membership is required to book a live session.
+- These are intended launch prices. Nothing charges today.
+
+## The core library
+
+20 poses are planned for the reviewed core library:
+
+- Mountain (Tadasana)
+- Downward dog (Adho Mukha Svanasana)
+- Warrior I (Virabhadrasana I)
+- Warrior II (Virabhadrasana II)
+- Triangle (Trikonasana)
+- Tree (Vrksasana)
+- Chair (Utkatasana)
+- Low lunge (Anjaneyasana)
+- Forward fold (Uttanasana)
+- Bridge (Setu Bandha Sarvangasana)
+- Pigeon (Eka Pada Rajakapotasana)
+- Cobra (Bhujangasana)
+- Plank (Phalakasana)
+- Chaturanga (Chaturanga Dandasana)
+- Child's pose (Balasana)
+- Seated twist (Ardha Matsyendrasana)
+- Corpse (Savasana)
+- Warrior III (Virabhadrasana III)
+- High lunge (Utthita Ashwa Sanchalanasana)
+- Upward dog (Urdhva Mukha Svanasana)
+
+Published so far: 0.
+
+## Principles
+
+- The phone watches. Nobody else does. Every frame is analysed on the device and discarded. We store angles and scores, never video. A practice done in a bedroom deserves that.
+- Say less. One cue at a time, never off a single frame, never twice in five seconds. Silence is part of teaching. An app that will not stop talking has not understood the room.
+- Safety before beauty. If three things are off, you hear the one that protects your knee or your lower back. Shape can wait. Joints cannot.
+- Bodies differ. Tolerances should too. A tight hamstring is a starting point, not a mistake. Every pose ships in beginner, intermediate and advanced tolerances, and adapts to your own baseline.
+- Humans review every pose. A badly captured reference would teach thousands of people bad form. Nothing a coach records goes live until another teacher has checked it.
+- Consistency over intensity. Streaks with grace days, no leaderboards, no red charts. Yoga rewards the person who shows up on a dull Tuesday, and so do we.
+- The machine serves the teacher. The AI fills the days between classes. It hands what it learned to a human coach, who does what no model can: notice you.
+
+## For teachers
+
+Record a pose three to five times, set per-joint tolerances, write the cues in
+your own words, and a second teacher reviews it before any student sees it. You
+set your own hourly rate and keep 80%. Apply: https://yoginini.us/coaches/#apply
+
+## Pages
+
+- https://yoginini.us/ — Yoginini watches your yoga form through your phone camera and speaks corrections out loud. Pose tracking runs on the device; video never leaves it. Book real teachers by the hour.
+- https://yoginini.us/philosophy/ — Why Yoginini is purple, what the crown chakra has to do with it, and the seven rules that decide how the app behaves.
+- https://yoginini.us/community/ — Practise live with people in other cities, share a streak with a friend, join a circle. No leaderboards, friends-only by default.
+- https://yoginini.us/coaches/ — Real yoga teachers, booked by the hour. Coaches set their own rate and keep 80%. Apply to join the founding cohort.
+- https://yoginini.us/pricing/ — $3 for 14 days, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of it.
+- https://yoginini.us/privacy/ — What Yoginini stores and what it does not. Video is analysed on your phone and discarded; only joint angles and scores leave the device.
+
+## Questions and answers
+
+Q: Does anyone see my camera feed?
+A: No. Video is processed on your phone and discarded frame by frame. Our servers receive joint angles and scores, never images. There is nothing to watch, even for us.
+
+Q: I'm a complete beginner. Will it just tell me I'm wrong all the time?
+A: Every pose ships with beginner, intermediate and advanced tolerances, and over time the app scales to your own baseline. A tight hamstring is a starting point, not an error.
+
+Q: What happens after the $3 trial?
+A: After 14 days it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap.
+
+Q: Are coaching sessions included in the membership?
+A: No. Coaches set their own hourly rate, and you pay per session. Your membership gives you their published poses and sequences to practise between calls.
+
+Q: Can a teacher look at my progress?
+A: If you want them to. You choose which sessions, poses or your full history to send a coach for review. They see the same angles and scores the app saw, never video, and can reply with notes or a sequence to work on. Sharing is off by default and you can revoke it any time.
+
+Q: Do I need special equipment?
+A: A phone with a camera and somewhere to lean it. Landscape, about two metres away, roughly hip height. The app checks your framing before each session.
+
+Q: Which phones?
+A: iPhone first, Android shortly after. Join the waitlist and tell us which you use.
+
+Q: Is Yoginini available yet?
+A: Not yet. Nothing has shipped, no coaches are signed, and there is no app to download. The waitlist is the only thing that is real today.
+
+Q: What exactly happens on day 14?
+A: Your $3 trial becomes the $15 monthly membership. You'll get an email on day 12 with a one-tap cancel link. Cancel before day 14 and you pay nothing more.
+
+Q: Is the price the same in the app and on the web?
+A: Yes, $15 either way. App stores take a cut of in-app subscriptions, so subscribing on the web leaves more for building the product. We'd rather you didn't have to think about it.
+
+Q: Do coaches charge extra for their poses and sequences?
+A: No. Anything a coach publishes to the library is included in membership. Coaches earn from live sessions, not from gating content.
+
+Q: How are coach payments handled?
+A: Through Stripe. You pay per session at the coach's hourly rate; the coach receives 80% and is paid out automatically. Refunds for missed or cancelled sessions follow each coach's stated policy.
+
+Q: Can I pause instead of cancelling?
+A: Yes, for up to three months. Your streak is protected while paused, and your history is kept.
+
+Q: When does any of this start charging?
+A: Not yet. There is no app and no payment form on this site. Nothing can charge you today, and the waitlist never asks for a card.
+
+## Citing this site
+
+Attribute to Yoginini and link https://yoginini.us. Please carry the pre-launch
+status with any claim about the product; describing it as available would be
+wrong. yoginini.json holds the same facts as structured data.
