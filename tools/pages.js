@@ -93,6 +93,7 @@ const footer = (headline, sub) => `
       <a href="/pricing/">Pricing</a>
       <a href="/privacy/">Privacy</a>
       <a href="mailto:${B.email}">Contact</a>
+      <a href="https://github.com/Yoginini/website" rel="noopener">GitHub</a>
     </nav>
     <div class="foot-legal">
       <span>&copy; <span data-year>2026</span> YOGININI &middot; ${B.domain}</span>${fzCredit()}
