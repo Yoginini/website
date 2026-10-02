@@ -76,9 +76,17 @@
       <p class="lede" data-reveal>Each frame is read by a pose model running on your phone. The model returns 33 landmarks &mdash; shoulders, elbows, hips, knees and so on. We turn those into the angles between limbs, compare the angles to the pose reference, and throw the frame away. The next frame arrives about 40 milliseconds later and the same thing happens again.</p>
       <p class="lede" data-reveal>Angles rather than positions is a privacy decision as much as a technical one. An angle describes a shape. It cannot be turned back into a picture of a room.</p>
     </div>
-    <div class="card card-dark" data-reveal style="align-self:start">
+    <div style="display:grid;gap:18px;align-self:start">
+    <figure class="shot" data-reveal>
+        <picture>
+          <source type="image/webp" srcset="/assets/img/privacy-480.webp 480w, /assets/img/privacy-800.webp 800w, /assets/img/privacy-1200.webp 1200w" sizes="(min-width: 1360px) 580px, (min-width: 860px) 45vw, 92vw">
+          <img class="photo" src="/assets/img/privacy-800.jpg" srcset="/assets/img/privacy-480.jpg 480w, /assets/img/privacy-800.jpg 800w, /assets/img/privacy-1200.jpg 1200w" sizes="(min-width: 1360px) 580px, (min-width: 860px) 45vw, 92vw" width="1200" height="900" alt="A phone lying switched off on a yoga mat in a quiet bedroom, a glass of water on the floor beside it." loading="lazy" decoding="async">
+        </picture>
+    </figure>
+    <div class="card card-dark" data-reveal>
       <p class="mono" style="font-size:11px;color:var(--lav);margin:0">THE WHOLE PIPELINE</p>
       <p class="mono" style="font-size:13px;color:var(--on-dark-3);margin:0;line-height:2">camera frame<br>&darr; on your phone<br>33 landmarks<br>&darr; on your phone<br>joint angles + score<br>&darr; on your phone<br>a spoken cue<br><br>&darr; uploaded<br>angles, score, timestamps</p>
+    </div>
     </div>
   </div>
 </section>

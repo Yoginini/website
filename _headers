@@ -37,3 +37,8 @@
 
 /.well-known/security.txt
   Content-Type: text/plain; charset=utf-8
+
+# Photographs. Not content-hashed, so a week rather than immutable: a re-encoded
+# still reaches visitors within days. Rename the file if it must change at once.
+/assets/img/*
+  Cache-Control: public, max-age=604800
