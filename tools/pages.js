@@ -30,6 +30,32 @@ const esc = s => String(s)
 /* Typographic quotes and apostrophes for body copy. */
 const tx = s => esc(s).replace(/'/g, '’');
 
+/* Photographs. Generated with Higgsfield Soul from the prompts in
+   tools/higgsfield/images.ts and encoded by tools/higgsfield/optimise.sh into
+   assets/img/<name>-<width>.{webp,jpg}. Scenes only: no person here is a coach,
+   a member or anyone real. w/h is the intrinsic size of the largest file, so
+   the browser can reserve the box before the image arrives. */
+const IMG = {
+  hero:    { w: 1920, h: 1080, widths: [640, 1280, 1920],
+             alt: 'A woman holds tree pose on her mat at home, her phone standing sideways beside a water bottle at the front of the mat.' },
+  how:     { w: 1200, h: 900,  widths: [480, 800, 1200],
+             alt: 'A phone leaning against a water bottle at the front of a yoga mat, a person sitting with arms outstretched out of focus behind it.' },
+  still:   { w: 1200, h: 800,  widths: [480, 800, 1200],
+             alt: 'A half-unrolled yoga mat, a folded blanket, a cork block and a cup of tea on a wooden floor in early light.' },
+  privacy: { w: 1200, h: 900,  widths: [480, 800, 1200],
+             alt: 'A phone lying switched off on a yoga mat in a quiet bedroom, a glass of water on the floor beside it.' },
+};
+
+function photo(name, sizes, { eager = false, style = '' } = {}) {
+  const m = IMG[name];
+  const set = ext => m.widths.map(w => `/assets/img/${name}-${w}.${ext} ${w}w`).join(', ');
+  const mid = m.widths[1];
+  return `<picture>
+          <source type="image/webp" srcset="${set('webp')}" sizes="${sizes}">
+          <img class="photo" src="/assets/img/${name}-${mid}.jpg" srcset="${set('jpg')}" sizes="${sizes}" width="${m.w}" height="${m.h}" alt="${esc(m.alt)}" ${eager ? 'fetchpriority="high" decoding="async"' : 'loading="lazy" decoding="async"'}${style ? ` style="${style}"` : ''}>
+        </picture>`;
+}
+
 const PAGES = [
   { slug: '',            file: 'index.html',            nav: null,          title: `${B.name} — a yoga teacher who can see you`,
     desc: 'Yoginini watches your yoga form through your phone camera and speaks corrections out loud. Pose tracking runs on the device; video never leaves it. Book real teachers by the hour.' },
@@ -346,6 +372,10 @@ function home() {
         <figcaption class="fine" style="margin-top:12px">A mockup of the in-app view. The app is not released.</figcaption>
       </figure>
     </div>
+
+    <figure class="shot shot-hero">
+        ${photo('hero', '(min-width: 1360px) 1232px, 92vw', { eager: true })}
+    </figure>
   </div>
 
   <div class="ticker" aria-hidden="true">
@@ -371,6 +401,16 @@ function home() {
       <p class="body" style="margin:0">${tx(s.body)}</p>
     </li>`).join('\n    ')}
   </ol>
+  <div class="grid-2 middle" style="margin-top:clamp(40px,6vh,64px)">
+    <figure class="shot" data-reveal>
+        ${photo('how', '(min-width: 1360px) 600px, (min-width: 860px) 45vw, 92vw')}
+    </figure>
+    <div data-reveal>
+      <p class="kicker">Setting up</p>
+      <h3>A phone, and somewhere to lean it.</h3>
+      <p class="lede">Landscape, about two metres away, roughly hip height. The app checks your framing before each session.</p>
+    </div>
+  </div>
 </section>
 
 <section class="dark sect">
@@ -606,6 +646,9 @@ function philosophy() {
 </section>
 
 <section class="sect center" style="max-width:900px;margin:0 auto;padding-inline:var(--pad)">
+  <figure class="shot" style="margin-bottom:clamp(48px,7vh,80px)" data-reveal>
+      ${photo('still', '(min-width: 900px) 772px, 92vw')}
+  </figure>
   <p class="kicker">The name</p>
   <h2 data-reveal>Yogini, <em class="soft">and us.</em></h2>
   <p class="lede" style="margin:24px auto 0" data-reveal>A yogini is a woman who practises. The name honours the teachers most of us first learned from, and the small repeated syllable is the practice itself: the same thing, again, a little better. The .us is not a place. It is who is on the mat with you.</p>
@@ -967,9 +1010,14 @@ function privacy() {
       <p class="lede" data-reveal>Each frame is read by a pose model running on your phone. The model returns 33 landmarks &mdash; shoulders, elbows, hips, knees and so on. We turn those into the angles between limbs, compare the angles to the pose reference, and throw the frame away. The next frame arrives about 40 milliseconds later and the same thing happens again.</p>
       <p class="lede" data-reveal>Angles rather than positions is a privacy decision as much as a technical one. An angle describes a shape. It cannot be turned back into a picture of a room.</p>
     </div>
-    <div class="card card-dark" data-reveal style="align-self:start">
+    <div style="display:grid;gap:18px;align-self:start">
+    <figure class="shot" data-reveal>
+        ${photo('privacy', '(min-width: 1360px) 580px, (min-width: 860px) 45vw, 92vw')}
+    </figure>
+    <div class="card card-dark" data-reveal>
       <p class="mono" style="font-size:11px;color:var(--lav);margin:0">THE WHOLE PIPELINE</p>
       <p class="mono" style="font-size:13px;color:var(--on-dark-3);margin:0;line-height:2">camera frame<br>&darr; on your phone<br>33 landmarks<br>&darr; on your phone<br>joint angles + score<br>&darr; on your phone<br>a spoken cue<br><br>&darr; uploaded<br>angles, score, timestamps</p>
+    </div>
     </div>
   </div>
 </section>

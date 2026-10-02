@@ -1,0 +1,12 @@
+{
+  "name": "yoginini-higgsfield",
+  "private": true,
+  "type": "module",
+  "description": "Generates the site's stills with the Higgsfield API. Not part of the site; never deployed.",
+  "scripts": {
+    "images": "bun run images.ts"
+  },
+  "dependencies": {
+    "@higgsfield/client": "^0.2.6"
+  }
+}

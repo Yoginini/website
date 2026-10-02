@@ -142,6 +142,7 @@ yoginini/
 │   ├── yog.css             one stylesheet, token-driven
 │   ├── yog-data.js         ← the single source of truth
 │   ├── yog-common.js       nav, reveal, sheet, forms, filters
+│   ├── img/                generated photographs, WebP + JPEG at 2–3 widths
 │   ├── favicon.svg         the crown lotus
 │   ├── lotus-animated.svg  the mark, breathing (used on factory0.ventures)
 │   └── og*.png  icon-512.png  apple-touch-icon.png  readme-banner.png
@@ -153,6 +154,7 @@ yoginini/
     ├── build-dist.sh       allowlist + content-hash stamping
     ├── render-og.sh        headless Chrome → every raster asset
     ├── og-render.html      the OG card template
+    ├── higgsfield/         generates and encodes assets/img (not deployed)
     └── banner-render.html  the README banner template
 ```
 
@@ -201,6 +203,8 @@ purple and why the mark is a lotus that opens on the breath.
 
 Cormorant Garamond for display, Figtree for text, Space Mono for labels.
 Every animation is behind `prefers-reduced-motion`.
+
+Photographs in `assets/img/` are generated with Higgsfield Soul (scenes only, nobody real; prompts in [`tools/higgsfield/images.ts`](tools/higgsfield/images.ts), encoding in `optimise.sh`).
 
 ---
 
