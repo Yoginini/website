@@ -350,10 +350,38 @@ p { text-wrap: pretty; }
 .foot-legal { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; display: grid; gap: 8px; justify-items: start; }
 /* "Built with": generated from tools/built-with.json; planned ones say so. */
 .foot-built { max-width: var(--wide); margin: 0 auto; padding: 0 var(--pad) 36px; }
-.built-with { margin: 0; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; line-height: 1.8; color: var(--on-dark-5); overflow-wrap: anywhere; }
-.built-with a { color: var(--on-dark-4); text-decoration: underline; text-underline-offset: 3px; }
-.built-with a:hover { color: #fff; }
-.built-with__planned { color: var(--on-dark-5); }
+/* Chips in the card-dark style: panel ground, hairline, Space Mono role,
+   Figtree name, a lavender dot when live. Planned ones are dashed and unfilled
+   with a small caps `planned` tag (the .tag look, on dark). Roles use
+   --on-dark-4: --on-dark-5 is under 4.5:1 on the panel. The whole chip is the
+   link's hit area. */
+.built-with { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.bw {
+  position: relative; display: inline-flex; align-items: center; flex-wrap: wrap; gap: 2px 9px;
+  min-height: 36px; max-width: 100%; padding: 6px 14px; border-radius: 8px;
+  background: var(--panel); border: 1px solid rgba(236, 231, 244, .14);
+  font-size: 13.5px; line-height: 1.35; transition: border-color .25s, background-color .25s;
+}
+.bw::before { content: ""; flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--lav); }
+.bw__role { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; color: var(--on-dark-4); }
+.built-with .bw__name { color: var(--on-dark); overflow-wrap: anywhere; }
+.built-with .bw__name::after { content: ""; position: absolute; inset: -1px; border-radius: 8px; }
+.built-with .bw__name:focus-visible { outline: none; }
+.built-with .bw__name:focus-visible::after { outline: 2px solid var(--lav); outline-offset: 3px; }
+.bw:hover { border-color: rgba(179, 157, 219, .6); }
+.built-with .bw:hover .bw__name { color: #fff; }
+.bw--planned { background: transparent; border-style: dashed; border-color: rgba(236, 231, 244, .2); }
+.bw--planned::before { background: transparent; box-shadow: inset 0 0 0 1.5px var(--on-dark-4); }
+.built-with .bw--planned .bw__name { color: var(--on-dark-2); }
+.bw__tag {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--on-dark-4); border: 1px solid rgba(236, 231, 244, .14); border-radius: 6px; padding: 2px 7px;
+}
+.bw__paren { display: none; }
+.bw--source { background: transparent; border-color: transparent; }
+.bw--source::before { display: none; }
+.bw--source:hover { border-color: rgba(236, 231, 244, .14); }
+@media (prefers-reduced-motion: reduce) { .bw { transition: none; } }
 .subprocessors { margin: 16px 0 0; padding-left: 20px; display: grid; gap: 10px; line-height: 1.6; color: var(--muted); max-width: 56ch; }
 .subprocessors a, .subprocessors__sister a { color: var(--purple); }
 .subprocessors__sister { margin: 16px 0 0; line-height: 1.6; color: var(--muted); max-width: 56ch; }
