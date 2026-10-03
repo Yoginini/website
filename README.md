@@ -130,6 +130,30 @@ cannot drift from what a human reads.
 
 ---
 
+# Built with
+
+The footer's last line, the privacy page's "Who processes data for this site"
+list and the `## Built with` section of `llms.txt` say what the site runs on and
+what is planned: hosted on Cloudflare (live); the backend on Cratefield, bug
+reports to SupportGenius and deploys by Keep Shipping (all planned, and
+labelled so). They are generated, never hand-written: `tools/built-with.json`
+is a vendored copy of this venture's entry in the Factory Zero registry
+(`Factory-Zero/website`, `assets/fz-data.js`, published as
+`https://factory0.ventures/stack.json`), and `tools/built-with.py` writes it
+between the `<!-- built-with:start/end -->` and `<!-- subprocessors:start/end -->`
+markers that `tools/pages.js` emits. `node tools/pages.js` runs it; nothing is
+fetched at runtime. Change the registry first, then:
+
+```bash
+python3 tools/built-with.py --pull    # refresh built-with.json, rewrite the pages
+python3 tools/built-with.py --check   # fails if a page is stale
+```
+
+The registry does not list Resend: the forms' secrets are not set (below), so
+nothing is sent through it yet. Add it to the registry when they are.
+
+---
+
 # Repo layout
 
 ```

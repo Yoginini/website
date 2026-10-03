@@ -125,6 +125,9 @@ const footer = (headline, sub) => `
       <span>&copy; <span data-year>2026</span> YOGININI &middot; ${B.domain}</span>${fzCredit()}
     </div>
   </div>
+  <div class="foot-built">
+    <!-- built-with:start --><!-- built-with:end -->
+  </div>
 </footer>`;
 
 /* The waitlist sheet. The design mocked Apple/Google/Meta sign-in buttons that
@@ -1047,6 +1050,9 @@ function privacy() {
       <p class="lede" data-reveal>You can export everything we hold about you, and you can delete your account. Deletion removes your practice history, not just your login. We will answer any request about your data at <a href="mailto:${B.email}" style="color:var(--purple)">${B.email}</a>.</p>
       <h2 style="margin-top:48px" data-reveal>This site</h2>
       <p class="lede" data-reveal>This website sets no cookies, runs no analytics and embeds no trackers. Fonts are served by Google Fonts, which sees your IP address when it serves them. The only thing we collect here is what you type into the waitlist or the coach application, and neither can deliver anything until we connect a mail provider.</p>
+      <h2 style="margin-top:48px" data-reveal>Who processes data for this site</h2>
+      <p class="lede" data-reveal>The services this site runs on, and the ones planned, from the <a href="https://factory0.ventures/stack.json" style="color:var(--purple)">Factory Zero registry</a>. Planned ones are not in use yet. Google Fonts, above, serves the type. The waitlist and coach forms will send through Resend once it is connected; it is not, so they send nothing and say so.</p>
+      <!-- subprocessors:start --><!-- subprocessors:end -->
       <p class="note" data-reveal><strong>Status.</strong> Yoginini has not launched. This page describes how the product is being built and what it will do. Until there is an app, there is no practice data at all.</p>
     </div>
   </div>
@@ -1194,6 +1200,14 @@ function llms() {
   L.push('- Sharing practice history with a coach is off by default, per scope, revocable.');
   L.push('- No leaderboards and no follower counts exist anywhere in the product.');
   L.push('');
+  L.push('## Built with');
+  L.push('');
+  // from tools/built-with.json, the vendored registry entry; planned is not in use
+  const BW = JSON.parse(fs.readFileSync(path.join(__dirname, 'built-with.json'), 'utf8'));
+  BW.uses.forEach(u => { L.push(`- ${u.phrase} ${u.name} (${u.status === 'live' ? 'in use today' : 'planned, not in use yet'}): ${u.url}`); });
+  L.push('');
+  L.push(`Source: the Factory Zero registry, ${BW.source}`);
+  L.push('');
   L.push('## Pricing');
   L.push('');
   L.push(`- Trial: $${D.pricing.trial.price} for ${D.pricing.trial.period}, then rolls into membership unless cancelled.`);
@@ -1256,4 +1270,10 @@ out('404.html', doc({ slug: '', noindex: true, file: '404.html', nav: null,
 out('sitemap.xml',   sitemap());
 out('llms.txt',      llms());
 out('yoginini.json', machineJson());
+
+// The footer's "Built with" line and the privacy page's processor list, from
+// tools/built-with.json (a vendored copy of this venture's entry in the Factory
+// Zero registry's stack.json). The pages above carry empty markers; this fills them.
+const bw = require('child_process').spawnSync('python3', [path.join(__dirname, 'built-with.py')], { stdio: 'inherit' });
+if (bw.status !== 0) throw new Error('tools/built-with.py failed');
 console.log('done.');
