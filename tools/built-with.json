@@ -1,0 +1,49 @@
+{
+  "id": "FZ-003",
+  "name": "Yoginini",
+  "site": "https://yoginini.us/",
+  "page": "https://factory0.ventures/ventures/yoginini/",
+  "uses": [
+    {
+      "id": "FZ-004",
+      "name": "Cratefield",
+      "kind": "factory-zero",
+      "url": "https://cratefield.com/",
+      "role": "framework",
+      "phrase": "Built with",
+      "status": "planned",
+      "note": "The bookings backend is being written to run on the Cratefield harness; it is not deployed."
+    },
+    {
+      "id": "FZ-008",
+      "name": "SupportGenius",
+      "kind": "factory-zero",
+      "url": "https://supportgeni.us/",
+      "role": "bug-reports",
+      "phrase": "Bug reports to",
+      "status": "planned",
+      "note": "Errors and bug reports become deduplicated GitHub issues, through the Cratefield error reporter."
+    },
+    {
+      "id": "FZ-012",
+      "name": "Keep Shipping",
+      "kind": "factory-zero",
+      "url": "https://keepshipping.run/",
+      "role": "deploys",
+      "phrase": "Deploys by",
+      "status": "planned",
+      "note": "Every venture site and Worker deployed from the Keep Shipping console."
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "kind": "third-party",
+      "url": "https://www.cloudflare.com",
+      "role": "hosting",
+      "phrase": "Hosted on",
+      "status": "live",
+      "note": "The site and its forms."
+    }
+  ],
+  "source": "https://factory0.ventures/stack.json"
+}

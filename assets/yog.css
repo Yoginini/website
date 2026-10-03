@@ -348,6 +348,15 @@ p { text-wrap: pretty; }
 .foot-mark { font-family: var(--serif); font-size: 22px; color: var(--on-dark); display: inline-flex; align-items: center; gap: 9px; }
 .foot-mark em { font-style: italic; font-weight: 300; color: var(--lav-lt); }
 .foot-legal { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; display: grid; gap: 8px; justify-items: start; }
+/* "Built with": generated from tools/built-with.json; planned ones say so. */
+.foot-built { max-width: var(--wide); margin: 0 auto; padding: 0 var(--pad) 36px; }
+.built-with { margin: 0; font-family: var(--mono); font-size: 11px; letter-spacing: .04em; line-height: 1.8; color: var(--on-dark-5); overflow-wrap: anywhere; }
+.built-with a { color: var(--on-dark-4); text-decoration: underline; text-underline-offset: 3px; }
+.built-with a:hover { color: #fff; }
+.built-with__planned { color: var(--on-dark-5); }
+.subprocessors { margin: 16px 0 0; padding-left: 20px; display: grid; gap: 10px; line-height: 1.6; color: var(--muted); max-width: 56ch; }
+.subprocessors a, .subprocessors__sister a { color: var(--purple); }
+.subprocessors__sister { margin: 16px 0 0; line-height: 1.6; color: var(--muted); max-width: 56ch; }
 
 /* Factory Zero credit: the ring is the FZ mark, rotating slowly. */
 .fz-credit { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; }

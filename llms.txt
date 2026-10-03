@@ -38,6 +38,15 @@ a real human teacher by the hour.
 - Sharing practice history with a coach is off by default, per scope, revocable.
 - No leaderboards and no follower counts exist anywhere in the product.
 
+## Built with
+
+- Built with Cratefield (planned, not in use yet): https://cratefield.com/
+- Bug reports to SupportGenius (planned, not in use yet): https://supportgeni.us/
+- Deploys by Keep Shipping (planned, not in use yet): https://keepshipping.run/
+- Hosted on Cloudflare (in use today): https://www.cloudflare.com
+
+Source: the Factory Zero registry, https://factory0.ventures/stack.json
+
 ## Pricing
 
 - Trial: $3 for 14 days, then rolls into membership unless cancelled.
