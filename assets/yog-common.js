@@ -91,21 +91,90 @@
     var endpoint = form.getAttribute('data-post');
     var msg      = $('.form-msg', form);
     var submit   = form.querySelector('[type="submit"]');
-    var label    = submit ? submit.textContent : '';
+    var label    = submit ? (submit.querySelector('[data-label]') || submit) : null;
+    var idle     = label ? label.textContent : '';
+    var contact  = D.brand ? D.brand.email : 'contact@yoginini.us';
+    var EMAIL    = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;   /* the same test the functions apply */
+    var BAD      = 'That email address does not look right. Check it and try again.';
+    var DOWN     = 'We could not reach us just now. Please try again in a moment, or write to ' + contact + '.';
+    var done     = null;
 
     function say(text, tone) {
       if (!msg) return;
       msg.textContent = text;
       msg.setAttribute('data-tone', tone || '');
     }
+    function busy(on) {
+      if (!submit) return;
+      submit.disabled = on;
+      if (on) submit.setAttribute('aria-busy', 'true'); else submit.removeAttribute('aria-busy');
+      if (label) label.textContent = on ? 'Sending…' : idle;
+    }
+    /* An inline error; the form keeps what was typed. `field` is marked and focused. */
+    function fail(text, field) {
+      say(text, 'err');
+      $$('input', form).forEach(function (i) { i.removeAttribute('aria-invalid'); });
+      if (field) { field.setAttribute('aria-invalid', 'true'); field.focus(); }
+    }
+    function el(tag, cls, text) {
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text) n.textContent = text;
+      return n;
+    }
+    /* The success panel, built with textContent: the address never becomes markup. */
+    function showDone(email) {
+      if (done) done.remove();
+      done = el('div', 'form-done');
+      done.setAttribute('role', 'status');
+      done.setAttribute('aria-live', 'polite');
+      done.setAttribute('tabindex', '-1');
+      done.appendChild(el('div', 'sheet-title', form.getAttribute('data-done-title') || 'Namaste.'));
+      var p = el('p', 'body');
+      var parts = (form.getAttribute('data-done-text') || 'We will write to {email} when your mat is ready.').split('{email}');
+      parts.forEach(function (part, i) {
+        if (i) p.appendChild(el('strong', '', email));
+        p.appendChild(document.createTextNode(part));
+      });
+      done.appendChild(p);
+      var note = form.getAttribute('data-done-note');
+      if (note) done.appendChild(el('p', 'fine', note));
+      var againText = form.getAttribute('data-again');
+      if (againText) {
+        var again = el('button', 'form-again', againText);
+        again.type = 'button';
+        again.addEventListener('click', function () {
+          done.remove(); done = null;
+          form.hidden = false;
+          say('', '');
+          var f = form.elements.email; if (f) { f.focus(); f.select(); }
+        });
+        done.appendChild(again);
+      }
+      form.hidden = true;
+      form.parentNode.insertBefore(done, form.nextSibling);
+      done.focus();
+    }
+
+    $$('input', form).forEach(function (i) {
+      i.addEventListener('input', function () {
+        if (i.getAttribute('aria-invalid') === 'true') { i.removeAttribute('aria-invalid'); say('', ''); }
+      });
+    });
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (submit && submit.disabled) return;
       if (form.querySelector('.hp') && form.querySelector('.hp').value) return; // bot
       var data = {};
-      new FormData(form).forEach(function (v, k) { if (k !== 'company') data[k] = v; });
+      new FormData(form).forEach(function (v, k) { if (k !== 'company') data[k] = typeof v === 'string' ? v.trim() : v; });
+      var nameField = form.elements.name, emailField = form.elements.email;
+      if (nameField && !data.name) { fail('Please add your name.', nameField); return; }
+      if (emailField && !EMAIL.test(data.email || '')) { fail(BAD, emailField); return; }
+      var missing = $$('[required]', form).filter(function (i) { return !String(i.value).trim(); })[0];
+      if (missing) { fail('Please fill in ' + (form.querySelector('label[for="' + missing.id + '"]') || {}).textContent + '.', missing); return; }
 
-      if (submit) { submit.disabled = true; submit.textContent = 'Sending…'; }
+      busy(true);
       say('', '');
 
       fetch(endpoint, {
@@ -113,29 +182,23 @@
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(data)
       })
-        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, body: j }; }); })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, status: r.status, body: j }; }); })
         .then(function (res) {
-          if (res.ok) {
-            form.setAttribute('data-done', 'true');
-            var done = form.getAttribute('data-done-text') || 'You are on the list. We will write when your mat is ready.';
-            form.innerHTML = '<div class="sheet-title" style="font-style:italic">Namaste.</div>' +
-                             '<p class="body" style="margin:0">' + done + '</p>';
-            return;
-          }
-          if (res.body && res.body.error === 'not_configured') {
-            say('Our mail sending is not connected yet, so this form cannot deliver. ' +
-                'Please write to ' + (D.brand ? D.brand.email : 'contact@yoginini.us') + ' and we will add you by hand.', 'err');
-          } else {
-            say('That did not send. Please try again, or write to ' +
-                (D.brand ? D.brand.email : 'contact@yoginini.us') + '.', 'err');
-          }
+          busy(false);
+          if (res.ok) { form.setAttribute('data-done', 'true'); showDone(data.email || ''); return; }
+          var err = res.body && res.body.error;
+          if (err === 'email_invalid') fail(BAD, emailField);
+          else if (err === 'name_required') fail('Please add your name.', nameField);
+          else if (err === 'link_invalid') fail('That link needs to start with https://.', form.elements.link);
+          else if (err === 'styles_required') fail('Please add the styles you teach.', form.elements.styles);
+          else if (err === 'challenge_failed') fail('The human check did not go through. Please reload the page and try again.');
+          else if (res.status === 429) fail('Too many tries. Wait a minute, then try again.');
+          else if (err === 'not_configured') {
+            fail('Our mail sending is not connected yet, so this form cannot deliver. ' +
+                 'Please write to ' + contact + ' and we will add you by hand.');
+          } else fail(DOWN);
         })
-        .catch(function () {
-          say('That did not send. Please write to ' + (D.brand ? D.brand.email : 'contact@yoginini.us') + '.', 'err');
-        })
-        .then(function () {
-          if (submit) { submit.disabled = false; submit.textContent = label; }
-        });
+        .catch(function () { busy(false); fail(DOWN); });
     });
   });
 
