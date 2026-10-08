@@ -252,10 +252,11 @@ pages say so and show the direct address rather than pretending to have sent:
 
 | Secret | For |
 | :--- | :--- |
-| `RESEND_API_KEY` | Sending at all |
+| `OWLPOST_API_KEY` | Sending at all, through Owlpost (`api.owlpost.to`) from `send.yoginini.us` |
 | `WAITLIST_TO` | Inbox for waitlist signups |
 | `COACH_TO` | Inbox for founding-coach applications |
-| `WAITLIST_FROM` | Optional. Defaults to `onboarding@resend.dev` |
+| `WAITLIST_FROM` | Optional. Defaults to `Yoginini <no-reply@send.yoginini.us>` |
+| `OWLPOST_BASE_URL` | Optional. Defaults to `https://api.owlpost.to` |
 | `TURNSTILE_SECRET` | Optional. Verifies a Turnstile token if present |
 
 ---
