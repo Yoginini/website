@@ -203,11 +203,11 @@
     <button class="sheet-close" type="button" data-sheet-close aria-label="Close">&times;</button>
     <p class="kicker" style="margin:0;color:var(--lav)">Early access</p>
     <h2 class="sheet-title" id="sheet-title">Save your place <em>on the mat.</em></h2>
-    <form class="form" data-post="/api/waitlist" data-done-text="You are on the list. We will write once, when your mat is ready.">
+    <form class="form" data-post="/api/waitlist" novalidate data-done-title="You are on the list." data-done-text="We will write to {email} when your mat is ready." data-done-note="Signed up before? You are still on it, nothing more to do." data-again="Use a different email">
       <label class="fine" style="color:var(--on-dark-2)" for="w-name">Your name</label>
-      <input id="w-name" name="name" autocomplete="name" required placeholder="Name">
+      <input id="w-name" name="name" autocomplete="name" required placeholder="Name" aria-describedby="w-msg">
       <label class="fine" style="color:var(--on-dark-2)" for="w-email">Email</label>
-      <input id="w-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      <input id="w-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="w-msg">
       <label class="fine" style="color:var(--on-dark-2)" for="w-platform">Which phone do you practise with?</label>
       <select id="w-platform" name="platform">
         <option value="iphone">iPhone</option>
@@ -215,8 +215,8 @@
         <option value="other">Something else</option>
       </select>
       <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn btn-primary btn-block" type="submit" style="margin-top:6px">Join the waitlist</button>
-      <p class="form-msg" role="status" aria-live="polite"></p>
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:6px"><span class="spin" aria-hidden="true"></span><span data-label>Join the waitlist</span></button>
+      <p class="form-msg" id="w-msg" role="alert"></p>
       <p class="fine" style="margin:2px 0 0">We ask for a name and an email, nothing else. One message when we open, one when you are in. No card, ever, on this site.</p>
     </form>
   </div>

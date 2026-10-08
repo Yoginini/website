@@ -138,11 +138,11 @@ const sheet = () => `
     <button class="sheet-close" type="button" data-sheet-close aria-label="Close">&times;</button>
     <p class="kicker" style="margin:0;color:var(--lav)">Early access</p>
     <h2 class="sheet-title" id="sheet-title">Save your place <em>on the mat.</em></h2>
-    <form class="form" data-post="/api/waitlist" data-done-text="You are on the list. We will write once, when your mat is ready.">
+    <form class="form" data-post="/api/waitlist" novalidate data-done-title="You are on the list." data-done-text="We will write to {email} when your mat is ready." data-done-note="Signed up before? You are still on it, nothing more to do." data-again="Use a different email">
       <label class="fine" style="color:var(--on-dark-2)" for="w-name">Your name</label>
-      <input id="w-name" name="name" autocomplete="name" required placeholder="Name">
+      <input id="w-name" name="name" autocomplete="name" required placeholder="Name" aria-describedby="w-msg">
       <label class="fine" style="color:var(--on-dark-2)" for="w-email">Email</label>
-      <input id="w-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      <input id="w-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="w-msg">
       <label class="fine" style="color:var(--on-dark-2)" for="w-platform">Which phone do you practise with?</label>
       <select id="w-platform" name="platform">
         <option value="iphone">iPhone</option>
@@ -150,8 +150,8 @@ const sheet = () => `
         <option value="other">Something else</option>
       </select>
       <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn btn-primary btn-block" type="submit" style="margin-top:6px">Join the waitlist</button>
-      <p class="form-msg" role="status" aria-live="polite"></p>
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:6px"><span class="spin" aria-hidden="true"></span><span data-label>Join the waitlist</span></button>
+      <p class="form-msg" id="w-msg" role="alert"></p>
       <p class="fine" style="margin:2px 0 0">We ask for a name and an email, nothing else. One message when we open, one when you are in. No card, ever, on this site.</p>
     </form>
   </div>
@@ -887,19 +887,19 @@ function coaches() {
         <li>Publish your own library of poses and sequences</li>
       </ul>
     </div>
-    <form class="form form-dark" data-post="/api/coach-apply" data-done-text="We will be in touch to set up a short call and your first pose capture.">
+    <form class="form form-dark" data-post="/api/coach-apply" novalidate data-done-title="Application received." data-done-text="We will write to {email} to set up a short call and your first pose capture.">
       <h3 style="font-size:30px;margin-bottom:6px;color:var(--on-dark)">Apply as a founding coach</h3>
       <label for="c-name">Your name</label>
-      <input id="c-name" name="name" autocomplete="name" required placeholder="Name">
+      <input id="c-name" name="name" autocomplete="name" required placeholder="Name" aria-describedby="c-msg">
       <label for="c-email">Email</label>
-      <input id="c-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      <input id="c-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="c-msg">
       <label for="c-styles">Styles you teach, and years teaching</label>
       <input id="c-styles" name="styles" required placeholder="Vinyasa and yin, 8 years">
       <label for="c-link">A link to your teaching</label>
       <input id="c-link" name="link" type="url" placeholder="https://">
       <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn btn-primary btn-block" type="submit" style="margin-top:6px">Send application</button>
-      <p class="form-msg" role="status" aria-live="polite"></p>
+      <button class="btn btn-primary btn-block" type="submit" style="margin-top:6px"><span class="spin" aria-hidden="true"></span><span data-label>Send application</span></button>
+      <p class="form-msg" id="c-msg" role="alert"></p>
       <p class="fine" style="margin:2px 0 0">We read every application by hand. Founding coaches help shape the core library and pay a reduced fee for their first year.</p>
     </form>
   </div>

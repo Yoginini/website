@@ -300,6 +300,25 @@ p { text-wrap: pretty; }
 .form-msg[data-tone="err"]  { color: #b4553f; }
 .dark .form-msg[data-tone="ok"]  { color: var(--lav); }
 .dark .form-msg[data-tone="err"] { color: #e0a86b; }
+.form[hidden], .form-done[hidden] { display: none; }
+.form-msg:empty { display: none; }
+.form-msg { overflow-wrap: anywhere; }
+.sheet-card .form-msg[data-tone="err"], .form-dark .form-msg[data-tone="err"] { color: var(--amber); }
+.form input[aria-invalid="true"] { border-color: var(--amber); }
+.form button[type="submit"] { display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
+.form button[aria-busy="true"] { cursor: progress; opacity: .8; }
+.form .spin { display: none; width: 14px; height: 14px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: yog-spin .7s linear infinite; }
+.form button[aria-busy="true"] .spin { display: inline-block; }
+@keyframes yog-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .form .spin { animation: none; border-right-color: currentColor; opacity: .6; } }
+.form-done { display: grid; gap: 10px; padding: 22px 0 4px; color: var(--on-dark); }
+.form-done:focus { outline: none; }
+.form-done:focus-visible { outline: 2px solid var(--lav); outline-offset: 6px; border-radius: 6px; }
+.form-done .sheet-title { margin: 0; font-style: italic; }
+.form-done p { margin: 0; color: var(--on-dark-2); font-size: 16px; line-height: 1.6; }
+.form-done strong { color: var(--lav-lt); font-weight: 500; overflow-wrap: anywhere; }
+.form-done .fine { color: var(--on-dark-4); font-size: 14px; }
+.form-again { justify-self: start; background: none; border: 0; padding: 0; font: inherit; font-size: 14px; color: var(--lav); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 
 /* ── Modal sheet ─────────────────────────────────────────────── */
 .sheet[hidden] { display: none !important; }
