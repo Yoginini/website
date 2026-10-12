@@ -42,6 +42,8 @@ const IMG = {
              alt: 'A phone leaning against a water bottle at the front of a yoga mat, a person sitting with arms outstretched out of focus behind it.' },
   still:   { w: 1200, h: 800,  widths: [480, 800, 1200],
              alt: 'A half-unrolled yoga mat, a folded blanket, a cork block and a cup of tea on a wooden floor in early light.' },
+  'coach-nena': { w: 1200, h: 1800, widths: [480, 800, 1200],
+             alt: 'Nena Purwasih in an extended side angle, one arm reaching overhead, on a mat in an open pavilion beside a pool and tropical garden.' },
   privacy: { w: 1200, h: 900,  widths: [480, 800, 1200],
              alt: 'A phone lying switched off on a yoga mat in a quiet bedroom, a glass of water on the floor beside it.' },
 };
@@ -308,7 +310,7 @@ const previewNote = (what = 'Everything in this section describes an app that ha
 const statusLine = () => `
       <p class="fine" style="margin:26px 0 0;display:inline-flex;align-items:center;gap:9px">
         <span style="width:7px;height:7px;border-radius:50%;background:var(--amber);display:inline-block;flex:none"></span>
-        In development. Nothing has shipped yet, no coaches are signed, and there is no app to download &mdash; the waitlist is the only thing that is real today.
+        In development. Nothing has shipped yet and there is no app to download &mdash; our first founding coach has joined, and booking opens at launch.
       </p>`;
 
 /* The tracked figure from the design source, drawn as static SVG. */
@@ -816,36 +818,61 @@ function coaches() {
 <section class="sect-s shell">
   <div class="grid-2 bottom" style="margin-bottom:clamp(28px,4vh,44px)">
     <div>
-      <p class="kicker">Seats open</p>
-      <h2 data-reveal>We are recruiting the <em class="soft">first teachers.</em></h2>
+      <p class="kicker">Founding coaches</p>
+      <h2 data-reveal>Meet our <em class="soft">first teacher.</em></h2>
     </div>
-    <p class="lede" style="margin:0" data-reveal>These are the seats in the founding cohort, not people. <strong>No coaches are signed yet</strong>, so there is nobody here to book &mdash; if you teach, the application at the bottom of this page is the real thing.</p>
+    <p class="lede" style="margin:0" data-reveal>Nena is the first teacher in the founding cohort. Three more are joining her &mdash; if you teach, the application at the bottom of this page is the real thing. Booking opens when the app launches.</p>
   </div>
 
-  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px" data-coach-filters role="group" aria-label="Filter seats by style">
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px" data-coach-filters role="group" aria-label="Filter coaches by style">
     ${D.coachFilters.map((f, i) => `<button type="button" class="btn btn-sm" data-filter="${esc(f)}" aria-pressed="${i === 0}" style="border:1px solid var(--line);background:${i === 0 ? 'var(--ink)' : 'transparent'};color:${i === 0 ? 'var(--bg)' : 'var(--ink)'}">${esc(f)}</button>`).join('\n    ')}
   </div>
 
   <div class="cards">
-    ${D.coachSeats.map(s => `<article class="card card-lift" data-seat data-tags="${esc(s.tags.join(','))}" style="min-height:300px" data-reveal>
+    ${D.coaches.map(c => `<article class="card" id="${esc(c.id)}" data-seat data-tags="${esc(c.tags.join(','))}" style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(22px,3vw,40px);align-items:start" data-reveal>
+      <div style="border-radius:16px;overflow:hidden;aspect-ratio:2/3;max-height:640px">
+        ${photo(c.photo, '(max-width: 700px) 100vw, 480px', { style: 'width:100%;height:100%;object-fit:cover;display:block' })}
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span class="mono" style="font-size:11px;color:var(--purple);letter-spacing:.08em;text-transform:uppercase">Founding coach</span>
+        <h3 style="font-size:clamp(30px,4vw,44px);margin:0">${esc(c.name)}</h3>
+        <p class="body" style="margin:0;color:var(--muted)">${esc(c.title)} &middot; ${esc(c.teaches)}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          ${c.credentials.map(t => `<span class="tag" style="color:var(--purple);border-color:var(--lav)">${esc(t)}</span>`).join('')}
+        </div>
+        <p class="lede" style="margin:4px 0 0;font-size:19px">${tx(c.summary)}</p>
+        ${c.bio.map(p => `<p class="body" style="margin:0;font-size:15px">${tx(p)}</p>`).join('\n        ')}
+        <div>
+          <p class="kicker" style="margin:8px 0 10px">Private sessions</p>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            ${c.privateSessions.map(t => `<span class="tag">${esc(t)}</span>`).join('')}
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">
+          ${c.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:6px;padding-top:14px;border-top:1px solid var(--band)">
+          <span class="fine">Rate set by ${esc(c.name.split(' ')[0])} &middot; booking opens at launch</span>
+          <a class="btn btn-ink btn-sm" href="/#waitlist">Join the waitlist</a>
+        </div>
+      </div>
+    </article>`).join('\n    ')}
+    ${D.coachesComing.map(s => `<article class="card card-lift" data-seat data-tags="${esc(s.tags.join(','))}" style="min-height:300px" data-reveal>
       <div style="aspect-ratio:16/7;border-radius:16px;background:repeating-linear-gradient(135deg,#e2dbea 0 10px,#ebe6f1 10px 20px);display:flex;align-items:flex-end;padding:14px">
-        <span class="mono" style="font-size:11px;color:var(--muted-2);background:rgba(245,242,248,.85);padding:6px 10px;border-radius:6px">seat open &middot; ${esc(s.style)}</span>
+        <span class="mono" style="font-size:11px;color:var(--muted-2);background:rgba(245,242,248,.85);padding:6px 10px;border-radius:6px">coming soon &middot; ${esc(s.style)}</span>
       </div>
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
-        <h3>${esc(s.style)}</h3>
-        <span class="mono" style="font-size:13px;color:var(--purple);white-space:nowrap">${esc(s.band)}</span>
-      </div>
+      <h3>${esc(s.style)} coach</h3>
       <p class="body" style="margin:0;font-size:15px">${tx(s.wants)}</p>
       <div style="display:flex;flex-wrap:wrap;gap:6px">
         ${s.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}
       </div>
       <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--band)">
-        <span class="fine">Rate is set by the teacher</span>
-        <a class="btn btn-ink btn-sm" href="#apply">Apply</a>
+        <span class="fine">Coming soon</span>
+        <a class="btn btn-ink btn-sm" href="#apply">Teach this? Apply</a>
       </div>
     </article>`).join('\n    ')}
   </div>
-  <p class="lede" data-coach-empty hidden style="text-align:center;padding:60px 0;font-family:var(--serif);font-size:26px;font-style:italic;max-width:none">No seat in this style yet. Tell us you teach it.</p>
+  <p class="lede" data-coach-empty hidden style="text-align:center;padding:60px 0;font-family:var(--serif);font-size:26px;font-style:italic;max-width:none">No coach in this style yet. Tell us you teach it.</p>
 </section>
 
 <section class="band sect">
@@ -1113,7 +1140,7 @@ function machineJson() {
     parentOrganization: B.parent,
     status: {
       launched: D.status.launched,
-      note: 'Pre-launch. No app has shipped, no coaches are signed, no accounts exist and nothing can be purchased.',
+      note: 'Pre-launch. No app has shipped, no accounts exist and nothing can be purchased. One founding coach has joined; booking opens at launch.',
       platform: D.status.platform,
       waitlistDelivers: D.status.waitlistLive,
       coachesSigned: D.status.coachesSigned,
@@ -1140,10 +1167,11 @@ function machineJson() {
       purchasableNote: 'No checkout exists on this site. These are intended launch prices.'
     },
     coaches: {
-      signed: 0,
-      profilesPublished: 0,
-      note: 'No coach profiles exist. The seats below are the founding cohort we are recruiting for, not people.',
-      seats: D.coachSeats.map(s => ({ style: s.style, tags: s.tags, indicativeRate: s.band, lookingFor: s.wants })),
+      signed: D.coaches.length,
+      profilesPublished: D.coaches.length,
+      note: 'Profiles are real teachers who have joined. Seats marked comingSoon are still being filled and are not people. Nobody can be booked until the app launches.',
+      profiles: D.coaches.map(c => ({ name: c.name, title: c.title, url: B.url + '/coaches/#' + c.id, teaches: c.teaches, credentials: c.credentials, tags: c.tags, summary: c.summary, privateSessions: c.privateSessions, bookable: false })),
+      comingSoon: D.coachesComing.map(s => ({ style: s.style, tags: s.tags, lookingFor: s.wants })),
       applyUrl: B.url + '/coaches/#apply'
     },
     community: {
@@ -1174,8 +1202,9 @@ function llms() {
   L.push('Yoginini has NOT launched. As of this file being generated:');
   L.push('');
   L.push('- There is no app to download. No App Store or Play Store listing exists.');
-  L.push('- No coaches are signed. The site publishes no coach profiles, and the styles');
-  L.push('  listed under "founding cohort" are open seats, not people.');
+  L.push(`- ${D.coaches.length} founding coach has joined: ${D.coaches.map(c => c.name).join(', ')}. Nobody can`);
+  L.push('  be booked until the app launches. The other styles listed are seats coming');
+  L.push('  soon, not people.');
   L.push('- No accounts exist and nothing can be bought. There is no checkout and no');
   L.push('  payment field anywhere on the site.');
   L.push('- Any figure describing usage, members or activity is absent by design. If you');

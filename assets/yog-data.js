@@ -1,8 +1,9 @@
 /* Yoginini — central data model. One source for the site and /yoginini.json.
  *
  * HONESTY RULES for this file, please keep them:
- *  1. No invented people. Yoginini has not signed a single coach yet, so there
- *     are no coach profiles here — only the seats we are recruiting for.
+ *  1. No invented people. `coaches` holds only teachers who have joined and
+ *     whose profile is their own words; everything else is a seat we are
+ *     still recruiting for (`coachesComing`), shown as a seat, not a person.
  *  2. No invented metrics. No "318 on the mat right now", no waitlist count,
  *     until something real counts them.
  *  3. Anything that depicts the app in use is marked `preview: true` and the
@@ -31,7 +32,7 @@ window.YOG = {
     launched: false,
     platform: 'iPhone first, Android after',
     waitlistLive: false,   // true once WAITLIST_* secrets are set on Pages
-    coachesSigned: 0,
+    coachesSigned: 1,
     posesPublished: 0,
     appStore: null,        // no link until there is an app
     playStore: null
@@ -101,20 +102,32 @@ window.YOG = {
   ],
 
   /* ── Coaches ─────────────────────────────────────────────── *
-   * Seats in the founding cohort, NOT people. Nobody is signed. */
-  coachSeats: [
-    { style: 'Vinyasa',     tags: ['Vinyasa', 'Beginners'],   band: '$55–70 / hr',
-      wants: 'Alignment for beginners. Someone who slows a shape down until it makes sense in an unfamiliar body.' },
-    { style: 'Ashtanga',    tags: ['Ashtanga', 'Inversions'], band: '$70–85 / hr',
+   * `coaches` are real people who have joined, in their own words.
+   * `coachesComing` are seats still being filled — NOT people. */
+  coaches: [
+    { id: 'nena-purwasih',
+      name: 'Nena Purwasih',
+      title: 'International yoga teacher',
+      photo: 'coach-nena',
+      credentials: ['RYT 500', 'YACEP', 'Reiki Master'],
+      tags: ['Hatha', 'Vinyasa', 'Yin', 'Restorative', 'Breathwork', 'Beginners'],
+      teaches: 'Hatha, Vinyasa, Yin, Restorative and Pranayama',
+      summary: 'Nena slows a pose down until it makes sense in your body. Trained in India and Bali, she blends traditional, alignment-based practice with a mindful, somatic approach.',
+      bio: [
+        'Nena is a certified 500-hour yoga teacher, a Yoga Alliance Continuing Education Provider (YACEP) and a Reiki Master. She trained in India and Bali and has taught in Indonesia, Italy, Norway, Sri Lanka and India.',
+        'She has guided everyone from people on a mat for the first time to experienced practitioners looking for something deeper. Her teaching is intuitive, compassionate and unhurried: every session starts from where you are today, not where a pose says you should be.',
+        'Alongside asana she works with breath, meditation, sound and energy practices, so a session with Nena is as much about how you breathe and feel as about where your knees are.'
+      ],
+      privateSessions: ['Hatha Flow', 'Yoga Nidra', 'Kundalini Shiwa–Shakti healing', 'Reiki healing'],
+      travelled: ['Indonesia', 'Italy', 'Norway', 'Sri Lanka', 'India'] }
+  ],
+  coachesComing: [
+    { style: 'Ashtanga', tags: ['Ashtanga', 'Inversions'],
       wants: 'The primary series, strength and inversions. Precision, and patience with how long a handstand takes to arrive.' },
-    { style: 'Restorative', tags: ['Restorative', 'Prenatal'],band: '$50–65 / hr',
-      wants: 'Tired bodies and busy nervous systems. Long holds, props, and permission to do less.' },
-    { style: 'Hatha',       tags: ['Hatha', 'Breathwork'],    band: '$60–75 / hr',
-      wants: 'Breath-led practice and meditation. Standing poses taught as places to be still.' },
-    { style: 'Athletes',    tags: ['Vinyasa', 'Athletes'],    band: '$60–80 / hr',
+    { style: 'Athletes', tags: ['Vinyasa', 'Athletes'],
       wants: 'Runners and cyclists whose hamstrings have opinions. Sequences you can finish after a long ride.' },
-    { style: 'Yin',         tags: ['Yin', 'Beginners'],       band: '$50–65 / hr',
-      wants: 'Hips and lower backs, three-minute holds, a quiet voice. For people who sit at a desk all day.' }
+    { style: 'Prenatal', tags: ['Restorative', 'Prenatal'],
+      wants: 'Pregnancy and the months after. Gentle strength, steady breath, and shapes that change as the body does.' }
   ],
   coachFilters: ['All', 'Vinyasa', 'Ashtanga', 'Hatha', 'Restorative', 'Yin', 'Beginners', 'Athletes', 'Inversions', 'Prenatal', 'Breathwork'],
 
@@ -243,7 +256,7 @@ window.YOG = {
     { q: 'Which phones?',
       a: 'iPhone first, Android shortly after. Join the waitlist and tell us which you use.' },
     { q: 'Is Yoginini available yet?',
-      a: 'Not yet. Nothing has shipped, no coaches are signed, and there is no app to download. The waitlist is the only thing that is real today.' }
+      a: 'Not yet. Nothing has shipped and there is no app to download. Our first founding coach has joined, and the waitlist is open; booking starts when the app launches.' }
   ],
 
   billingFaqs: [
