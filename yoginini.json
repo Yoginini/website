@@ -191,6 +191,12 @@
           "Kundalini Shiwa–Shakti healing",
           "Reiki healing"
         ],
+        "location": {
+          "place": "Lovina, Bali",
+          "region": "North Bali, Indonesia",
+          "lat": -8.1585,
+          "lon": 115.026
+        },
         "bookable": false
       }
     ],
