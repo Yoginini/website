@@ -182,14 +182,14 @@ window.YOG = {
 
   /* ── Streaks ─────────────────────────────────────────────── */
   badges: [
-    { name: 'First Breath',    how: 'Complete your first session' },
-    { name: 'Seven Suns',      how: 'A 7-day streak',                          warm: true },
-    { name: 'Steady as Stone', how: 'A 30-day streak' },
-    { name: 'Balance Keeper',  how: 'Tree pose, both sides, clean form' },
-    { name: 'The Long Exhale', how: 'One session over 60 minutes',             warm: true },
-    { name: 'Still Water',     how: '5 hours in restorative poses' },
-    { name: 'Quiet Mind',      how: '50 hours on the mat, all time' },
-    { name: "Coach's Pick",    how: 'Given by hand, by a real coach. The rarest one.', rare: true }
+    { name: 'First Breath',    how: 'Complete your first session', icon: 'breath' },
+    { name: 'Seven Suns',      how: 'A 7-day streak',                          warm: true, icon: 'sun' },
+    { name: 'Steady as Stone', how: 'A 30-day streak', icon: 'stones' },
+    { name: 'Balance Keeper',  how: 'Tree pose, both sides, clean form', icon: 'tree' },
+    { name: 'The Long Exhale', how: 'One session over 60 minutes',             warm: true, icon: 'exhale' },
+    { name: 'Still Water',     how: '5 hours in restorative poses', icon: 'water' },
+    { name: 'Quiet Mind',      how: '50 hours on the mat, all time', icon: 'moon' },
+    { name: "Coach's Pick",    how: 'Given by hand, by a real coach. The rarest one.', rare: true, icon: 'star' }
   ],
 
   /* ── Community ───────────────────────────────────────────── *

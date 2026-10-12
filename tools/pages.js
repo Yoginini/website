@@ -58,6 +58,19 @@ const IMG = {
 
 const mapUrl = l => `https://www.openstreetmap.org/?mlat=${l.lat}&amp;mlon=${l.lon}#map=13/${l.lat}/${l.lon}`;
 
+/* Badge glyphs: 24-unit line icons, drawn in currentColor so the medallion sets the tone. */
+const BADGE_ICONS = {
+  breath: '<path d="M3 9h10a3 3 0 1 0-3-3"/><path d="M3 13h15a3 3 0 1 1-3 3"/><path d="M3 17h6"/>',
+  sun:    '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/>',
+  stones: '<ellipse cx="12" cy="18.5" rx="7.5" ry="2.8"/><ellipse cx="12" cy="12.6" rx="5.2" ry="2.3"/><ellipse cx="12" cy="7.6" rx="3.2" ry="1.8"/><path d="M12 4.2v-1.4"/>',
+  tree:   '<circle cx="12" cy="5.2" r="1.7"/><path d="M12 7.4v7.6M12 15l0 6.5M12 15.2l-3.8 1.9 3.6 1.6"/><path d="M12 9.6L8.4 3.4M12 9.6l3.6-6.2"/>',
+  exhale: '<path d="M3.5 9.5h9.5c2.5 0 4-1.3 4-3"/><path d="M3.5 13.5H17c2.2 0 3.5 1.2 3.5 3"/><path d="M3.5 17.5h7" opacity=".6"/><path d="M3.5 5.5h4" opacity=".6"/>',
+  water:  '<path d="M12 4c2.2 2.6 3.2 4.4 3.2 6a3.2 3.2 0 0 1-6.4 0c0-1.6 1-3.4 3.2-6z"/><path d="M3.5 17c2.8 1.8 5.6 1.8 8.5 0s5.7-1.8 8.5 0"/><path d="M6.5 20.5c1.8.9 3.7.9 5.5 0s3.7-.9 5.5 0" opacity=".55"/>',
+  moon:   '<path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"/><path d="M16.5 3.5v3M15 5h3M20 8.5v2M19 9.5h2" opacity=".7"/>',
+  star:   '<path d="M12 3.2l2.5 5.2 5.7.8-4.1 4 1 5.6L12 16.1l-5.1 2.7 1-5.6-4.1-4 5.7-.8z"/><path d="M8.5 18.6L7 22l2.6-1M15.5 18.6L17 22l-2.6-1" opacity=".7"/>'
+};
+const badgeIcon = name => `<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${BADGE_ICONS[name] || ''}</svg>`;
+
 function photo(name, sizes, { eager = false, style = '' } = {}) {
   const m = IMG[name];
   const set = ext => m.widths.map(w => `/assets/img/${name}-${w}.${ext} ${w}w`).join(', ');
@@ -535,7 +548,7 @@ function home() {
   </div>
   <ul class="cards" style="list-style:none;margin:0;padding:0">
     ${D.badges.map(b => `<li class="card" data-reveal style="gap:10px;padding:24px 22px">
-      <span style="width:26px;height:26px;border-radius:50%;background:${b.rare ? 'var(--ink)' : b.warm ? 'var(--amber)' : 'var(--lav)'};display:block"></span>
+      <span style="width:60px;height:60px;border-radius:50%;display:grid;place-items:center;flex:none;${b.rare ? 'background:var(--ink);color:var(--amber);box-shadow:0 0 0 3px var(--paper),0 0 0 4px var(--amber)' : b.warm ? 'background:rgba(224,168,107,.18);color:#a8692a;box-shadow:inset 0 0 0 1px rgba(224,168,107,.55)' : 'background:rgba(179,157,219,.2);color:var(--purple);box-shadow:inset 0 0 0 1px rgba(179,157,219,.6)'}">${badgeIcon(b.icon)}</span>
       <span style="font-family:var(--serif);font-size:24px;font-weight:500;line-height:1.1">${tx(b.name)}</span>
       <span class="fine" style="margin:0">${tx(b.how)}</span>
     </li>`).join('\n    ')}
