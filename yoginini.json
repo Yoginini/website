@@ -1,6 +1,6 @@
 {
   "$schema": "https://yoginini.us/yoginini.json",
-  "generated": "2026-10-08",
+  "generated": "2026-10-12",
   "name": "Yoginini",
   "url": "https://yoginini.us",
   "tagline": "A yoga teacher who can see you.",
@@ -13,10 +13,10 @@
   },
   "status": {
     "launched": false,
-    "note": "Pre-launch. No app has shipped, no coaches are signed, no accounts exist and nothing can be purchased.",
+    "note": "Pre-launch. No app has shipped, no accounts exist and nothing can be purchased. One founding coach has joined; booking opens at launch.",
     "platform": "iPhone first, Android after",
     "waitlistDelivers": false,
-    "coachesSigned": 0,
+    "coachesSigned": 1,
     "posesPublished": 0,
     "appStoreUrl": null,
     "playStoreUrl": null
@@ -162,45 +162,46 @@
     "purchasableNote": "No checkout exists on this site. These are intended launch prices."
   },
   "coaches": {
-    "signed": 0,
-    "profilesPublished": 0,
-    "note": "No coach profiles exist. The seats below are the founding cohort we are recruiting for, not people.",
-    "seats": [
+    "signed": 1,
+    "profilesPublished": 1,
+    "note": "Profiles are real teachers who have joined. Seats marked comingSoon are still being filled and are not people. Nobody can be booked until the app launches.",
+    "profiles": [
       {
-        "style": "Vinyasa",
+        "name": "Nena Purwasih",
+        "title": "International yoga teacher",
+        "url": "https://yoginini.us/coaches/#nena-purwasih",
+        "teaches": "Hatha, Vinyasa, Yin, Restorative and Pranayama",
+        "credentials": [
+          "RYT 500",
+          "YACEP",
+          "Reiki Master"
+        ],
         "tags": [
+          "Hatha",
           "Vinyasa",
+          "Yin",
+          "Restorative",
+          "Breathwork",
           "Beginners"
         ],
-        "indicativeRate": "$55–70 / hr",
-        "lookingFor": "Alignment for beginners. Someone who slows a shape down until it makes sense in an unfamiliar body."
-      },
+        "summary": "Nena slows a pose down until it makes sense in your body. Trained in India and Bali, she blends traditional, alignment-based practice with a mindful, somatic approach.",
+        "privateSessions": [
+          "Hatha Flow",
+          "Yoga Nidra",
+          "Kundalini Shiwa–Shakti healing",
+          "Reiki healing"
+        ],
+        "bookable": false
+      }
+    ],
+    "comingSoon": [
       {
         "style": "Ashtanga",
         "tags": [
           "Ashtanga",
           "Inversions"
         ],
-        "indicativeRate": "$70–85 / hr",
         "lookingFor": "The primary series, strength and inversions. Precision, and patience with how long a handstand takes to arrive."
-      },
-      {
-        "style": "Restorative",
-        "tags": [
-          "Restorative",
-          "Prenatal"
-        ],
-        "indicativeRate": "$50–65 / hr",
-        "lookingFor": "Tired bodies and busy nervous systems. Long holds, props, and permission to do less."
-      },
-      {
-        "style": "Hatha",
-        "tags": [
-          "Hatha",
-          "Breathwork"
-        ],
-        "indicativeRate": "$60–75 / hr",
-        "lookingFor": "Breath-led practice and meditation. Standing poses taught as places to be still."
       },
       {
         "style": "Athletes",
@@ -208,17 +209,15 @@
           "Vinyasa",
           "Athletes"
         ],
-        "indicativeRate": "$60–80 / hr",
         "lookingFor": "Runners and cyclists whose hamstrings have opinions. Sequences you can finish after a long ride."
       },
       {
-        "style": "Yin",
+        "style": "Prenatal",
         "tags": [
-          "Yin",
-          "Beginners"
+          "Restorative",
+          "Prenatal"
         ],
-        "indicativeRate": "$50–65 / hr",
-        "lookingFor": "Hips and lower backs, three-minute holds, a quiet voice. For people who sit at a desk all day."
+        "lookingFor": "Pregnancy and the months after. Gentle strength, steady breath, and shapes that change as the body does."
       }
     ],
     "applyUrl": "https://yoginini.us/coaches/#apply"
@@ -295,7 +294,7 @@
     },
     {
       "question": "Is Yoginini available yet?",
-      "answer": "Not yet. Nothing has shipped, no coaches are signed, and there is no app to download. The waitlist is the only thing that is real today."
+      "answer": "Not yet. Nothing has shipped and there is no app to download. Our first founding coach has joined, and the waitlist is open; booking starts when the app launches."
     },
     {
       "question": "What exactly happens on day 14?",
