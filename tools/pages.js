@@ -44,6 +44,12 @@ const IMG = {
              alt: 'A half-unrolled yoga mat, a folded blanket, a cork block and a cup of tea on a wooden floor in early light.' },
   'coach-nena': { w: 1200, h: 1800, widths: [480, 800, 1200],
              alt: 'Nena Purwasih in an extended side angle, one arm reaching overhead, on a mat in an open pavilion beside a pool and tropical garden.' },
+  'coach-nena-sound':   { w: 800, h: 1067, widths: [400, 800],
+             alt: 'Nena Purwasih smiling, holding a singing bowl and striker, beside two small tables with oracle cards, a fan and small statues.' },
+  'coach-nena-session': { w: 800, h: 1066, widths: [400, 800],
+             alt: 'Nena Purwasih kneeling beside a student lying on a mat, one hand resting lightly on the student’s chest.' },
+  'coach-nena-reiki':   { w: 800, h: 1067, widths: [400, 800],
+             alt: 'Nena Purwasih standing beside a treatment table, her hands held above the face of a man lying on it, during a Reiki session.' },
   privacy: { w: 1200, h: 900,  widths: [480, 800, 1200],
              alt: 'A phone lying switched off on a yoga mat in a quiet bedroom, a glass of water on the floor beside it.' },
 };
@@ -830,8 +836,13 @@ function coaches() {
 
   <div class="cards">
     ${D.coaches.map(c => `<article class="card" id="${esc(c.id)}" data-seat data-tags="${esc(c.tags.join(','))}" style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(22px,3vw,40px);align-items:start" data-reveal>
-      <div style="border-radius:16px;overflow:hidden;aspect-ratio:2/3;max-height:640px">
-        ${photo(c.photo, '(max-width: 700px) 100vw, 480px', { style: 'width:100%;height:100%;object-fit:cover;display:block' })}
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border-radius:16px;overflow:hidden;aspect-ratio:2/3;max-height:640px">
+          ${photo(c.photo, '(max-width: 700px) 100vw, 480px', { style: 'width:100%;height:100%;object-fit:cover;display:block' })}
+        </div>
+        ${c.gallery && c.gallery.length ? `<div style="display:grid;grid-template-columns:repeat(${c.gallery.length},1fr);gap:10px">
+          ${c.gallery.map(g => `<div style="border-radius:12px;overflow:hidden;aspect-ratio:3/4">${photo(g, '(max-width: 700px) 33vw, 160px', { style: 'width:100%;height:100%;object-fit:cover;display:block' })}</div>`).join('\n          ')}
+        </div>` : ''}
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
         <span class="mono" style="font-size:11px;color:var(--purple);letter-spacing:.08em;text-transform:uppercase">Founding coach</span>
