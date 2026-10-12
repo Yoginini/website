@@ -50,6 +50,8 @@ const IMG = {
              alt: 'Nena Purwasih kneeling beside a student lying on a mat, one hand resting lightly on the student’s chest.' },
   'coach-nena-reiki':   { w: 800, h: 1067, widths: [400, 800],
              alt: 'Nena Purwasih standing beside a treatment table, her hands held above the face of a man lying on it, during a Reiki session.' },
+  'coach-nena-map':     { w: 1600, h: 900, widths: [800, 1600],
+             alt: 'A map of north Bali with a pin on Lovina, on the coast west of Singaraja.' },
   privacy: { w: 1200, h: 900,  widths: [480, 800, 1200],
              alt: 'A phone lying switched off on a yoga mat in a quiet bedroom, a glass of water on the floor beside it.' },
 };
@@ -862,6 +864,15 @@ function coaches() {
         <div style="display:flex;flex-wrap:wrap;gap:6px">
           ${c.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}
         </div>
+        ${c.location ? `<div>
+          <p class="kicker" style="margin:8px 0 10px">Based in ${esc(c.location.place)}</p>
+          <figure style="margin:0;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line)">
+            ${photo(c.location.map, '(max-width: 700px) 100vw, 560px', { style: 'width:100%;height:auto;display:block' })}
+            <span aria-hidden="true" style="position:absolute;left:${c.location.pin.x}%;top:${c.location.pin.y}%;transform:translate(-50%,calc(-100% - 18px));background:var(--ink);color:var(--bg);font-size:12px;font-weight:500;padding:5px 10px;border-radius:8px;white-space:nowrap">${esc(c.location.place)}</span>
+            <figcaption class="mono" style="position:absolute;right:8px;bottom:6px;font-size:10px;color:var(--muted-2);background:rgba(245,242,248,.85);padding:2px 6px;border-radius:4px">&copy; <a href="https://www.openstreetmap.org/copyright" style="color:inherit">OpenStreetMap</a> contributors</figcaption>
+          </figure>
+          <p class="fine" style="margin:8px 0 0">${esc(c.location.region)} &middot; <a href="https://www.openstreetmap.org/?mlat=${c.location.lat}&amp;mlon=${c.location.lon}#map=13/${c.location.lat}/${c.location.lon}" target="_blank" rel="noopener">Open in a map</a></p>
+        </div>` : ''}
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:6px;padding-top:14px;border-top:1px solid var(--band)">
           <span class="fine">Rate set by ${esc(c.name.split(' ')[0])} &middot; booking opens at launch</span>
           <a class="btn btn-ink btn-sm" href="/#waitlist">Join the waitlist</a>
@@ -1181,7 +1192,7 @@ function machineJson() {
       signed: D.coaches.length,
       profilesPublished: D.coaches.length,
       note: 'Profiles are real teachers who have joined. Seats marked comingSoon are still being filled and are not people. Nobody can be booked until the app launches.',
-      profiles: D.coaches.map(c => ({ name: c.name, title: c.title, url: B.url + '/coaches/#' + c.id, teaches: c.teaches, credentials: c.credentials, tags: c.tags, summary: c.summary, privateSessions: c.privateSessions, bookable: false })),
+      profiles: D.coaches.map(c => ({ name: c.name, title: c.title, url: B.url + '/coaches/#' + c.id, teaches: c.teaches, credentials: c.credentials, tags: c.tags, summary: c.summary, privateSessions: c.privateSessions, location: c.location && { place: c.location.place, region: c.location.region, lat: c.location.lat, lon: c.location.lon }, bookable: false })),
       comingSoon: D.coachesComing.map(s => ({ style: s.style, tags: s.tags, lookingFor: s.wants })),
       applyUrl: B.url + '/coaches/#apply'
     },

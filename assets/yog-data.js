@@ -120,7 +120,9 @@ window.YOG = {
         'Alongside asana she works with breath, meditation, sound and energy practices, so a session with Nena is as much about how you breathe and feel as about where your knees are.'
       ],
       privateSessions: ['Hatha Flow', 'Yoga Nidra', 'Kundalini Shiwa–Shakti healing', 'Reiki healing'],
-      travelled: ['Indonesia', 'Italy', 'Norway', 'Sri Lanka', 'India'] }
+      travelled: ['Indonesia', 'Italy', 'Norway', 'Sri Lanka', 'India'],
+      location: { place: 'Lovina, Bali', region: 'North Bali, Indonesia', lat: -8.1585, lon: 115.026,
+                  map: 'coach-nena-map', pin: { x: 45.9, y: 26.8 } } }
   ],
   coachesComing: [
     { style: 'Ashtanga', tags: ['Ashtanga', 'Inversions'],
