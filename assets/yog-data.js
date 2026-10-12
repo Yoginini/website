@@ -109,6 +109,7 @@ window.YOG = {
       name: 'Nena Purwasih',
       title: 'International yoga teacher',
       photo: 'coach-nena',
+      gallery: ['coach-nena-sound', 'coach-nena-session', 'coach-nena-reiki'],
       credentials: ['RYT 500', 'YACEP', 'Reiki Master'],
       tags: ['Hatha', 'Vinyasa', 'Yin', 'Restorative', 'Breathwork', 'Beginners'],
       teaches: 'Hatha, Vinyasa, Yin, Restorative and Pranayama',
@@ -124,12 +125,12 @@ window.YOG = {
   coachesComing: [
     { style: 'Ashtanga', tags: ['Ashtanga', 'Inversions'],
       wants: 'The primary series, strength and inversions. Precision, and patience with how long a handstand takes to arrive.' },
-    { style: 'Athletes', tags: ['Vinyasa', 'Athletes'],
-      wants: 'Runners and cyclists whose hamstrings have opinions. Sequences you can finish after a long ride.' },
-    { style: 'Prenatal', tags: ['Restorative', 'Prenatal'],
-      wants: 'Pregnancy and the months after. Gentle strength, steady breath, and shapes that change as the body does.' }
+    { style: 'Vinyasa', tags: ['Vinyasa', 'Beginners'],
+      wants: 'Alignment for beginners. Someone who slows a shape down until it makes sense in an unfamiliar body.' },
+    { style: 'Yin', tags: ['Yin', 'Restorative'],
+      wants: 'Hips and lower backs, three-minute holds, a quiet voice. For people who sit at a desk all day.' }
   ],
-  coachFilters: ['All', 'Vinyasa', 'Ashtanga', 'Hatha', 'Restorative', 'Yin', 'Beginners', 'Athletes', 'Inversions', 'Prenatal', 'Breathwork'],
+  coachFilters: ['All', 'Vinyasa', 'Ashtanga', 'Hatha', 'Restorative', 'Yin', 'Beginners', 'Inversions', 'Breathwork'],
 
   coachSteps: [
     { n: 'i',   title: 'Record the pose',      body: 'Three to five takes. We keep the median angle per joint and drop the outliers.' },
