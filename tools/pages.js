@@ -56,6 +56,8 @@ const IMG = {
              alt: 'A phone lying switched off on a yoga mat in a quiet bedroom, a glass of water on the floor beside it.' },
 };
 
+const mapUrl = l => `https://www.openstreetmap.org/?mlat=${l.lat}&amp;mlon=${l.lon}#map=13/${l.lat}/${l.lon}`;
+
 function photo(name, sizes, { eager = false, style = '' } = {}) {
   const m = IMG[name];
   const set = ext => m.widths.map(w => `/assets/img/${name}-${w}.${ext} ${w}w`).join(', ');
@@ -840,10 +842,10 @@ function coaches() {
     ${D.coaches.map(c => `<article class="card" id="${esc(c.id)}" data-seat data-tags="${esc(c.tags.join(','))}" style="grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(22px,3vw,40px);align-items:start" data-reveal>
       <div style="display:flex;flex-direction:column;gap:10px">
         <div style="border-radius:16px;overflow:hidden;aspect-ratio:2/3;max-height:640px">
-          ${photo(c.photo, '(max-width: 700px) 100vw, 480px', { style: 'width:100%;height:100%;object-fit:cover;display:block' })}
+          ${photo(c.photo, '(max-width: 700px) 100vw, 480px', { style: 'width:100%;height:100%;object-fit:cover;display:block;border-radius:0' })}
         </div>
         ${c.gallery && c.gallery.length ? `<div style="display:grid;grid-template-columns:repeat(${c.gallery.length},1fr);gap:10px">
-          ${c.gallery.map(g => `<div style="border-radius:12px;overflow:hidden;aspect-ratio:3/4">${photo(g, '(max-width: 700px) 33vw, 160px', { style: 'width:100%;height:100%;object-fit:cover;display:block' })}</div>`).join('\n          ')}
+          ${c.gallery.map(g => `<div style="border-radius:12px;overflow:hidden;aspect-ratio:3/4">${photo(g, '(max-width: 700px) 33vw, 160px', { style: 'width:100%;height:100%;object-fit:cover;display:block;border-radius:0' })}</div>`).join('\n          ')}
         </div>` : ''}
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
@@ -866,12 +868,11 @@ function coaches() {
         </div>
         ${c.location ? `<div>
           <p class="kicker" style="margin:8px 0 10px">Based in ${esc(c.location.place)}</p>
-          <figure style="margin:0;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line)">
-            ${photo(c.location.map, '(max-width: 700px) 100vw, 560px', { style: 'width:100%;height:auto;display:block' })}
+          <a href="${mapUrl(c.location)}" target="_blank" rel="noopener" aria-label="Open ${esc(c.location.place)} in OpenStreetMap (new tab)" style="display:block;position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);isolation:isolate">
+            ${photo(c.location.map, '(max-width: 700px) 100vw, 560px', { style: 'width:100%;height:auto;display:block;border-radius:0' })}
             <span aria-hidden="true" style="position:absolute;left:${c.location.pin.x}%;top:${c.location.pin.y}%;transform:translate(-50%,calc(-100% - 18px));background:var(--ink);color:var(--bg);font-size:12px;font-weight:500;padding:5px 10px;border-radius:8px;white-space:nowrap">${esc(c.location.place)}</span>
-            <figcaption class="mono" style="position:absolute;right:8px;bottom:6px;font-size:10px;color:var(--muted-2);background:rgba(245,242,248,.85);padding:2px 6px;border-radius:4px">&copy; <a href="https://www.openstreetmap.org/copyright" style="color:inherit">OpenStreetMap</a> contributors</figcaption>
-          </figure>
-          <p class="fine" style="margin:8px 0 0">${esc(c.location.region)} &middot; <a href="https://www.openstreetmap.org/?mlat=${c.location.lat}&amp;mlon=${c.location.lon}#map=13/${c.location.lat}/${c.location.lon}" target="_blank" rel="noopener">Open in a map</a></p>
+          </a>
+          <p class="fine" style="margin:8px 0 0">${esc(c.location.region)} &middot; <a href="${mapUrl(c.location)}" target="_blank" rel="noopener">Open in a map</a> &middot; Map &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</p>
         </div>` : ''}
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:6px;padding-top:14px;border-top:1px solid var(--band)">
           <span class="fine">Rate set by ${esc(c.name.split(' ')[0])} &middot; booking opens at launch</span>
