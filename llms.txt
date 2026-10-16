@@ -5,6 +5,7 @@
 Site: https://yoginini.us
 Contact: contact@yoginini.us
 Machine-readable: https://yoginini.us/yoginini.json
+Product film (illustration; the app is in development): https://yoginini.us/#how
 Operated by: Factory Zero (FZ-003), https://factory0.ventures
 
 ## Status, read this first

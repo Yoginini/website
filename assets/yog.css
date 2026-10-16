@@ -433,6 +433,13 @@ p { text-wrap: pretty; }
 }
 .dark .photo { background: var(--panel); }
 .shot figcaption { margin-top: 12px; }
+/* The product film. Native controls, no autoplay, rounded like the photo cards. */
+.film { width: 100%; }
+.film video {
+  display: block; width: 100%; height: auto; border-radius: 24px;
+  background: var(--band); border: 1px solid var(--line); aspect-ratio: 16 / 9;
+}
+.film figcaption { color: var(--muted); }
 .shot-hero { margin-top: clamp(40px, 7vh, 72px); animation: fadein 1.4s .4s both; }
 .shot-hero .photo { border-radius: 28px; aspect-ratio: 16 / 9; border: 1px solid rgba(236, 231, 244, .14); }
 @media (max-width: 860px) {
