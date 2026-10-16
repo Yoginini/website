@@ -24,6 +24,16 @@
 /assets/*.svg
   Cache-Control: public, max-age=604800
 
+# The product film and its poster. Not content-hashed, so a day rather than
+# immutable. The film is the only video the site serves.
+/assets/films/*.mp4
+  Cache-Control: public, max-age=86400
+  Content-Type: video/mp4
+
+/assets/films/*.jpg
+  Cache-Control: public, max-age=86400
+  Content-Type: image/jpeg
+
 # The agent-readable layer. Open to any origin so a tool can just fetch it.
 /yoginini.json
   Cache-Control: public, max-age=3600

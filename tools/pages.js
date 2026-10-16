@@ -421,6 +421,16 @@ function home() {
     </div>
     <p class="lede" style="margin:0" data-reveal>No wearables, no special mat. The phone you already own, propped against a water bottle, is enough.</p>
   </div>
+  <figure class="film" data-reveal style="margin:0 0 clamp(40px,6vh,64px)">
+    <video controls playsinline preload="none" poster="/assets/films/yoginini-poster-v2.jpg" width="1920" height="1080" aria-label="Product film: how a Yoginini session works, from reading the shape to hearing the first correction. No autoplay.">
+      <source src="/assets/films/yoginini-promo-v2.mp4" type="video/mp4">
+      <span class="fine" style="display:block">Your browser cannot play this film. <a href="/#how">The three steps are listed below.</a></span>
+    </video>
+    <figcaption class="fine" style="margin-top:12px">
+      <span style="display:block">How it works, in 40 seconds.</span>
+      <span class="mono" style="display:block;font-size:11px;color:var(--muted-2);margin-top:6px">Illustration &middot; app in development</span>
+    </figcaption>
+  </figure>
   <ol class="cards-3" style="list-style:none;margin:0;padding:0">
     ${D.steps.map(s => `<li class="card" data-reveal>
       <span class="mono" style="font-size:11px;color:var(--muted-2)">${esc(s.meta)}</span>
@@ -1231,6 +1241,7 @@ function llms() {
   L.push(`Site: ${B.url}`);
   L.push(`Contact: ${B.email}`);
   L.push(`Machine-readable: ${B.url}/yoginini.json`);
+  L.push(`Product film (illustration; the app is in development): ${B.url}/#how`);
   L.push(`Operated by: ${B.parent.name} (${B.parent.id}), ${B.parent.url}`);
   L.push('');
   L.push('## Status, read this first');
