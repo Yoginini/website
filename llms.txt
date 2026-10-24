@@ -51,7 +51,7 @@ Source: the Factory Zero registry, https://factory0.ventures/stack.json
 
 ## Pricing
 
-- Trial: $3 for your first month, then rolls into membership unless cancelled.
+- Trial: $3 for your first week, then rolls into membership unless cancelled.
 - Membership: $15 per month in the US, on the web and in the app. Elsewhere the App Store sets its own local price.
 - Coaching is NOT included. Coaches set their own rate, typically $50–85 / hr.
 - Coaches keep 80% (1:1 sessions). On repeat bookings with the same student the
@@ -108,7 +108,7 @@ set your own hourly rate and keep 80% (1:1 sessions). Apply: https://yoginini.us
 - https://yoginini.us/philosophy/ — Why Yoginini is purple, what the crown chakra has to do with it, and the seven rules that decide how the app behaves.
 - https://yoginini.us/community/ — Practise live with people in other cities, share a streak with a friend, join a circle. No leaderboards, friends-only by default.
 - https://yoginini.us/coaches/ — Real yoga teachers, booked by the hour. Coaches set their own rate and keep 80% of every 1:1 session. Apply to join the founding cohort.
-- https://yoginini.us/pricing/ — $3 for your first month, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of every 1:1 session.
+- https://yoginini.us/pricing/ — $3 for your first week, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of every 1:1 session.
 - https://yoginini.us/privacy/ — What Yoginini stores and what it does not. Video is analysed on your phone and discarded; only joint angles and scores leave the device.
 
 ## Questions and answers
@@ -120,7 +120,7 @@ Q: I'm a complete beginner. Will it just tell me I'm wrong all the time?
 A: Every pose ships with beginner, intermediate and advanced tolerances, and over time the app scales to your own baseline. A tight hamstring is a starting point, not an error.
 
 Q: What happens after the $3 trial?
-A: After your first month it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap.
+A: After your first week it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap.
 
 Q: Are coaching sessions included in the membership?
 A: No. Coaches set their own hourly rate, and you pay per session. Your membership gives you their published poses and sequences to practise between calls.
@@ -137,8 +137,8 @@ A: iPhone first, Android shortly after. Join the waitlist and tell us which you 
 Q: Is Yoginini available yet?
 A: Not yet. Nothing has shipped and there is no app to download. Our first founding coach has joined, and the waitlist is open; booking starts when the app launches.
 
-Q: What happens when the first month ends?
-A: Your $3 first month becomes the $15 monthly membership. You'll get an email two days before, with a one-tap cancel link. Cancel before the month ends and you pay nothing more.
+Q: What happens when the first week ends?
+A: Your $3 first week becomes the $15 monthly membership. You'll get an email two days before, with a one-tap cancel link. Cancel before the week ends and you pay nothing more.
 
 Q: Is the price the same in the app and on the web?
 A: In the US, yes: $15 either way. In other countries the App Store sets its own local price, so it can differ a little from the web. App stores take a cut of in-app subscriptions, so subscribing on the web leaves more for building the product.

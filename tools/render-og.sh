@@ -33,7 +33,7 @@ card og-community.png "Alone on your mat. <em>Never on your own.</em>" "COMMUNIT
 card og-coaches.png "Real teachers, <em>by the hour.</em>" "FOUNDING COHORT" \
   "Coaches set their own rate and keep 80%. We are recruiting the first of them."
 card og-pricing.png "One plan. <em>Coaches priced by coaches.</em>" "PRICING" \
-  "\$3 for your first month, then \$15 a month. Live sessions are paid at the teacher's own rate."
+  "\$3 for your first week, then \$15 a month. Live sessions are paid at the teacher's own rate."
 card og-privacy.png "There is no video <em>to leak.</em>" "PRIVACY" \
   "Every frame is analysed on your phone and discarded. Only angles and scores leave it."
 

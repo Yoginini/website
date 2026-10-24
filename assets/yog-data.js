@@ -41,7 +41,7 @@ window.YOG = {
   /* ── Pricing ─────────────────────────────────────────────── */
   pricing: {
     currency: 'USD',
-    trial:      { name: 'Trial',      price: 3,  period: 'your first month', rolls: true },
+    trial:      { name: 'Trial',      price: 3,  period: 'your first week', rolls: true },
     membership: { name: 'Membership', price: 15, period: 'month' },
     membershipIncludes: [
       'Live camera coaching with spoken cues',
@@ -249,7 +249,7 @@ window.YOG = {
     { q: "I'm a complete beginner. Will it just tell me I'm wrong all the time?",
       a: 'Every pose ships with beginner, intermediate and advanced tolerances, and over time the app scales to your own baseline. A tight hamstring is a starting point, not an error.' },
     { q: 'What happens after the $3 trial?',
-      a: 'After your first month it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap.' },
+      a: 'After your first week it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap.' },
     { q: 'Are coaching sessions included in the membership?',
       a: 'No. Coaches set their own hourly rate, and you pay per session. Your membership gives you their published poses and sequences to practise between calls.' },
     { q: 'Can a teacher look at my progress?',
@@ -263,8 +263,8 @@ window.YOG = {
   ],
 
   billingFaqs: [
-    { q: 'What happens when the first month ends?',
-      a: "Your $3 first month becomes the $15 monthly membership. You'll get an email two days before, with a one-tap cancel link. Cancel before the month ends and you pay nothing more." },
+    { q: 'What happens when the first week ends?',
+      a: "Your $3 first week becomes the $15 monthly membership. You'll get an email two days before, with a one-tap cancel link. Cancel before the week ends and you pay nothing more." },
     { q: 'Is the price the same in the app and on the web?',
       a: "In the US, yes: $15 either way. In other countries the App Store sets its own local price, so it can differ a little from the web. App stores take a cut of in-app subscriptions, so subscribing on the web leaves more for building the product." },
     { q: 'Do coaches charge extra for their poses and sequences?',
