@@ -1286,7 +1286,7 @@ function llms() {
   L.push('## Pricing');
   L.push('');
   L.push(`- Trial: $${D.pricing.trial.price} for ${D.pricing.trial.period}, then rolls into membership unless cancelled.`);
-  L.push(`- Membership: $${D.pricing.membership.price} per ${D.pricing.membership.period}. Same price on web and in-app.`);
+  L.push(`- Membership: $${D.pricing.membership.price} per ${D.pricing.membership.period} in the US, on the web and in the app. Elsewhere the App Store sets its own local price.`);
   L.push(`- Coaching is NOT included. Coaches set their own rate, typically ${D.pricing.coaching.rateBand}.`);
   L.push(`- Coaches keep ${D.pricing.coaching.coachKeeps}. On repeat bookings with the same student the`);
   L.push(`  platform share drops to ${D.pricing.coaching.repeatShare}. Payouts run through ${D.pricing.coaching.processor}.`);

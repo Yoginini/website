@@ -52,7 +52,7 @@ Source: the Factory Zero registry, https://factory0.ventures/stack.json
 ## Pricing
 
 - Trial: $3 for 14 days, then rolls into membership unless cancelled.
-- Membership: $15 per month. Same price on web and in-app.
+- Membership: $15 per month in the US, on the web and in the app. Elsewhere the App Store sets its own local price.
 - Coaching is NOT included. Coaches set their own rate, typically $50–85 / hr.
 - Coaches keep 80% (1:1 sessions). On repeat bookings with the same student the
   platform share drops to 10–12%. Payouts run through Stripe.
