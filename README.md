@@ -239,7 +239,7 @@ Cloudflare Pages, project `yoginini`, on the Kontinuum account. The zone
 
 ```bash
 ./tools/build-dist.sh
-npx wrangler pages deploy dist --project-name yoginini
+bunx wrangler pages deploy dist --project-name yoginini
 ```
 
 `_headers` caches `/assets/*.css` and `*.js` immutably, which is only safe
