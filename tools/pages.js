@@ -308,9 +308,8 @@ ${page.noindex ? '<meta name="robots" content="noindex, follow">' : `<link rel="
 <link rel="alternate" type="application/json" href="/yoginini.json" title="Yoginini, machine-readable">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="Yoginini for language models">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Figtree:wght@300;400;500;600&family=Space+Mono&display=swap">
+<link rel="preload" href="/assets/fonts/cormorant-garamond-latin-normal.d80df8ff.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-latin-normal.4ba7d3d0.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/yog.css">
 ${extraStyle ? `<style>${extraStyle}</style>` : ''}
 <script type="application/ld+json">${jsonLd(page)}</script>
@@ -1122,9 +1121,9 @@ function privacy() {
       <h2 data-reveal>Your rights</h2>
       <p class="lede" data-reveal>You can export everything we hold about you, and you can delete your account. Deletion removes your practice history, not just your login. We will answer any request about your data at <a href="mailto:${B.email}" style="color:var(--purple)">${B.email}</a>.</p>
       <h2 style="margin-top:48px" data-reveal>This site</h2>
-      <p class="lede" data-reveal>This website sets no cookies, runs no analytics and embeds no trackers. Fonts are served by Google Fonts, which sees your IP address when it serves them. The only thing we collect here is what you type into the waitlist or the coach application, and neither can deliver anything until we connect a mail provider.</p>
+      <p class="lede" data-reveal>This website sets no cookies, runs no analytics and embeds no trackers. Fonts are self-hosted and bundled with the site. The only thing we collect here is what you type into the waitlist or the coach application, and neither can deliver anything until we connect a mail provider.</p>
       <h2 style="margin-top:48px" data-reveal>Who processes data for this site</h2>
-      <p class="lede" data-reveal>The services this site runs on, and the ones planned, from the <a href="https://factory0.ventures/stack.json" style="color:var(--purple)">Factory Zero registry</a>. Planned ones are not in use yet. Google Fonts, above, serves the type. The waitlist and coach forms will send through Resend once it is connected; it is not, so they send nothing and say so.</p>
+      <p class="lede" data-reveal>The services this site runs on, and the ones planned, from the <a href="https://factory0.ventures/stack.json" style="color:var(--purple)">Factory Zero registry</a>. Planned ones are not in use yet. The waitlist and coach forms will send through Resend once it is connected; it is not, so they send nothing and say so.</p>
       <!-- subprocessors:start --><!-- subprocessors:end -->
       <p class="note" data-reveal><strong>Status.</strong> Yoginini has not launched. This page describes how the product is being built and what it will do. Until there is an app, there is no practice data at all.</p>
     </div>
