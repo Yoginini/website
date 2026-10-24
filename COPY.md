@@ -4,6 +4,13 @@ Source of record for the words and media credits on the site. Pages are generate
 from `assets/yog-data.js` by `tools/pages.js`; this file lists the non-generated
 media.
 
+## Pricing and status
+
+| Claim | Where | Status |
+| :--- | :--- | :--- |
+| $3 for your first week, then $15 a month; coaches keep 80% of 1:1 sessions | Pricing, FAQ, llms.txt | Planned at launch; nothing is charged yet. Labelled on the pricing page |
+| Status: In development (factory0 lists Yoginini as Private beta; the site keeps its own wording until the owner confirms) | Footer badge, status line | Factory Zero status badge: factory0.ventures/ventures/yoginini/ |
+
 ## Films
 
 | Asset | Path | Music | Voice | Claims shown on screen | Status |
