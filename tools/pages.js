@@ -148,6 +148,7 @@ const footer = (headline, sub) => `
     </nav>
     <div class="foot-legal">
       <span>&copy; <span data-year>2026</span> YOGININI &middot; ${B.domain}</span>${fzCredit()}
+      <a href="https://factory0.ventures/ventures/yoginini/"><img src="https://factory0.ventures/badge/yoginini.svg" alt="In development · a Factory Zero venture" height="22"></a>
     </div>
   </div>
   <div class="foot-built">
@@ -333,6 +334,7 @@ const statusLine = () => `
       <p class="fine" style="margin:26px 0 0;display:inline-flex;align-items:center;gap:9px">
         <span style="width:7px;height:7px;border-radius:50%;background:var(--amber);display:inline-block;flex:none"></span>
         In development. Nothing has shipped yet and there is no app to download &mdash; our first founding coach has joined, and booking opens at launch.
+      <a href="https://factory0.ventures/ventures/yoginini/"><img src="https://factory0.ventures/badge/yoginini.svg" alt="In development · a Factory Zero venture" height="22"></a>
       </p>`;
 
 /* The tracked figure from the design source, drawn as static SVG. */
@@ -570,7 +572,7 @@ function home() {
       <div>
         <p class="kicker">Pricing</p>
         <h2 data-reveal>Less than one class. <em class="soft">Every day of the month.</em></h2>
-        <p class="lede" data-reveal>Membership covers the AI coach and every published pose. Live sessions with a human are paid per hour, at whatever that human charges.</p>
+        <p class="lede" data-reveal>Planned at launch; nothing is charged yet. Membership covers the AI coach and every published pose. Live sessions with a human are paid per hour, at whatever that human charges.</p>
         <p style="margin:28px 0 0"><a class="arrow" href="/pricing/">Full pricing and how coach bookings work <span aria-hidden="true">&rarr;</span></a></p>
       </div>
       <div class="cards-3" style="grid-template-columns:1fr 1fr">
@@ -1050,7 +1052,7 @@ function pricing() {
 
 </main>
 
-${footer('Fourteen days, three dollars, <em class="soft">one real teacher.</em>')}`;
+${footer('Seven days, three dollars, <em class="soft">one real teacher.</em>')}`;
 }
 
 /* ── page: privacy ───────────────────────────────────────────── */
