@@ -53,14 +53,14 @@ window.YOG = {
     ],
     coaching: {
       rateBand: '$50–85 / hr',
-      coachKeeps: '80%',
+      coachKeeps: '80% (1:1 sessions)',
       repeatShare: '10–12%',
       membershipRequired: true,
       processor: 'Stripe'
     },
     rows: [
       { k: 'Typical hourly rate',       sub: 'Set by each coach',                     v: '$50–85' },
-      { k: 'Coach keeps',               sub: 'Paid out through Stripe',               v: '80%',    accent: true },
+      { k: 'Coach keeps (1:1 sessions)',sub: 'Paid out through Stripe',               v: '80%',    accent: true },
       { k: 'Repeat student, same coach',sub: 'Our share on bookings after the first', v: '10–12%', accent: true },
       { k: 'Membership required?',      sub: 'To book a live session',                v: 'Yes',    italic: true }
     ]
@@ -147,7 +147,7 @@ window.YOG = {
     { title: 'The call starts already informed',
       body: "If you've shared, the coach arrives knowing your poses, the cues you keep hearing, and your streak. No warm-up chat about what you're working on." },
     { title: 'Pay per session, in the app or on the web',
-      body: 'Rates are hourly and set by the coach. Payments run through Stripe; the coach keeps 80%. Repeat sessions with the same coach cost the coach less in fees, so long relationships are rewarded.' },
+      body: 'Rates are hourly and set by the coach. Payments run through Stripe; for every 1:1 session, the coach keeps 80%. Repeat sessions with the same coach cost the coach less in fees, so long relationships are rewarded.' },
     { title: 'Video, scheduling and notes in one place',
       body: "Book from the coach's calendar, join the call from the app, and get their notes and a custom sequence afterwards to practise with the AI coach until next time." }
   ],
@@ -266,13 +266,13 @@ window.YOG = {
     { q: 'What exactly happens on day 14?',
       a: "Your $3 trial becomes the $15 monthly membership. You'll get an email on day 12 with a one-tap cancel link. Cancel before day 14 and you pay nothing more." },
     { q: 'Is the price the same in the app and on the web?',
-      a: "Yes, $15 either way. App stores take a cut of in-app subscriptions, so subscribing on the web leaves more for building the product. We'd rather you didn't have to think about it." },
+      a: "In the US, yes: $15 either way. In other countries the App Store sets its own local price, so it can differ a little from the web. App stores take a cut of in-app subscriptions, so subscribing on the web leaves more for building the product." },
     { q: 'Do coaches charge extra for their poses and sequences?',
       a: 'No. Anything a coach publishes to the library is included in membership. Coaches earn from live sessions, not from gating content.' },
     { q: 'How are coach payments handled?',
-      a: "Through Stripe. You pay per session at the coach's hourly rate; the coach receives 80% and is paid out automatically. Refunds for missed or cancelled sessions follow each coach's stated policy." },
+      a: "Through Stripe. You pay per session at the coach's hourly rate; for every 1:1 session, the coach receives 80% and is paid out automatically. Refunds for missed or cancelled sessions follow each coach's stated policy." },
     { q: 'Can I pause instead of cancelling?',
-      a: 'Yes, for up to three months. Your streak is protected while paused, and your history is kept.' },
+      a: 'There is no pause, but cancelling loses nothing. Your streak and history are kept, and you can resubscribe any time. The trial is once per person, so coming back goes straight to the monthly membership.' },
     { q: 'When does any of this start charging?',
       a: 'Not yet. There is no app and no payment form on this site. Nothing can charge you today, and the waitlist never asks for a card.' }
   ]

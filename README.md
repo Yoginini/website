@@ -53,7 +53,7 @@ are stuck — because you chose to share your practice history with them.
 | Plan | Price | Notes |
 | :--- | :--- | :--- |
 | Trial | **$3** / 14 days | Rolls into membership on day 14 unless cancelled; email on day 12 |
-| Membership | **$15** / month | Same price on web and in-app |
+| Membership | **$15** / month | Same price on web and in-app in the US; the App Store sets local prices elsewhere |
 | Coaching | **$50–85** / hr | Not included. Coach sets the rate and keeps **80%** |
 | Repeat bookings | 10–12% | Platform share drops after a student's first session with the same coach |
 

@@ -89,9 +89,9 @@ const PAGES = [
   { slug: 'community',   file: 'community/index.html',  nav: 'Community',   title: `Community — ${B.name}`,
     desc: 'Practise live with people in other cities, share a streak with a friend, join a circle. No leaderboards, friends-only by default.' },
   { slug: 'coaches',     file: 'coaches/index.html',    nav: 'Coaches',     title: `Coaches — ${B.name}`,
-    desc: 'Real yoga teachers, booked by the hour. Coaches set their own rate and keep 80%. Apply to join the founding cohort.' },
+    desc: 'Real yoga teachers, booked by the hour. Coaches set their own rate and keep 80% of every 1:1 session. Apply to join the founding cohort.' },
   { slug: 'pricing',     file: 'pricing/index.html',    nav: 'Pricing',     title: `Pricing — ${B.name}`,
-    desc: '$3 for 14 days, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of it.' },
+    desc: '$3 for 14 days, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of every 1:1 session.' },
   { slug: 'privacy',     file: 'privacy/index.html',    nav: null,          title: `Privacy — ${B.name}`,
     desc: 'What Yoginini stores and what it does not. Video is analysed on your phone and discarded; only joint angles and scores leave the device.' }
 ];
@@ -510,7 +510,7 @@ function home() {
         <p class="kicker">Human coaches</p>
         <h2 data-reveal>When you want a person, <em class="soft">book one.</em></h2>
       </div>
-      <p class="lede" style="margin:0" data-reveal>The AI fills the days between classes. A teacher does what no model can: notice you. Coaches set their own rate, keep 80% of it, and arrive at the call already knowing where you are stuck.</p>
+      <p class="lede" style="margin:0" data-reveal>The AI fills the days between classes. A teacher does what no model can: notice you. Coaches set their own rate, keep 80% of every 1:1 session, and arrive at the call already knowing where you are stuck.</p>
     </div>
     <div class="rows" style="max-width:760px">
       ${D.pricing.rows.map(r => `<div class="row-kv">
@@ -599,7 +599,7 @@ function home() {
         <p class="kicker on-dark">For teachers</p>
         <h2 data-reveal>Teach the app <em class="soft">your poses.</em></h2>
         <p class="lede" data-reveal>Hold a pose for the camera a few times. Set how strict each joint should be. Write the cues in your own words. Once reviewed, your students practise with your voice in their ear between sessions, and you walk into every live call already knowing where they struggle.</p>
-        <p class="lede" data-reveal>You set your rate and keep 80% of it. Repeat students with you cost you less, not more.</p>
+        <p class="lede" data-reveal>You set your rate and keep 80% of every 1:1 session. Repeat students with you cost you less, not more.</p>
         <p style="margin:28px 0 0"><a class="arrow" href="/coaches/#apply">Apply to teach on Yoginini <span aria-hidden="true">&rarr;</span></a></p>
       </div>
       <ol class="steps" style="list-style:none;margin:0;padding:0">
@@ -780,7 +780,7 @@ function community() {
       <p class="mono" style="font-size:11px;color:var(--purple);margin:0">GRACE DAYS</p>
       <h3>Two a month, no questions.</h3>
       <p class="body" style="margin:0;font-size:15px">Flu, a late flight, a bad week. Two days a month are forgiven automatically, and the streak survives. You do not have to ask, and nobody is told.</p>
-      <p class="body" style="margin:auto 0 0;font-size:15px">Pause for up to three months and the streak is frozen rather than lost.</p>
+      <p class="body" style="margin:auto 0 0;font-size:15px">Cancel and the streak is kept, not lost; resubscribe any time and it carries on.</p>
     </div>
     <div class="card" style="min-height:320px" data-reveal>
       <p class="mono" style="font-size:11px;color:var(--purple);margin:0">CHEERS, NOT LIKES</p>
@@ -839,7 +839,7 @@ function coaches() {
       <h1 style="margin-top:24px;animation:rise 1s .1s both">Real teachers, <em class="soft">by the hour.</em></h1>
     </div>
     <div>
-      <p class="lede" style="margin:0;animation:rise 1s .22s both">Every coach sets their own rate and keeps 80% of it. Book a live one-to-one call, and they will arrive already knowing your practice from the app.</p>
+      <p class="lede" style="margin:0;animation:rise 1s .22s both">Every coach sets their own rate and keeps 80% of every 1:1 session. Book a live one-to-one call, and they will arrive already knowing your practice from the app.</p>
       ${statusLine()}
     </div>
   </div>
@@ -935,7 +935,7 @@ function coaches() {
       <p class="kicker">Economics</p>
       <h2 data-reveal>Pay the teacher, <em class="soft">not the app.</em></h2>
     </div>
-    <p class="lede" style="margin:0" data-reveal>Of every session, 80% goes to the coach and 20% keeps the calls, calendar, payments and payouts running. Book a coach you have worked with before and our share drops, so the people who stick with you cost less to keep.</p>
+    <p class="lede" style="margin:0" data-reveal>Of every 1:1 session, 80% goes to the coach and 20% keeps the calls, calendar, payments and payouts running. Book a coach you have worked with before and our share drops, so the people who stick with you cost less to keep.</p>
   </div>
   <div class="rows" style="max-width:760px">
     ${D.pricing.rows.map(r => `<div class="row-kv">
@@ -953,7 +953,7 @@ function coaches() {
       <h2 data-reveal>Your poses. Your words. <em class="soft">Your students, everywhere.</em></h2>
       <p class="lede" data-reveal>Record a pose a few times and the app learns it. Set how strict each joint should be. Write the cues the way you would say them in class. After review, your students practise with you between sessions.</p>
       <ul class="dashed" style="margin-top:22px">
-        <li>Set your own hourly rate, keep 80%</li>
+        <li>Set your own hourly rate, keep 80% (1:1 sessions)</li>
         <li>Calendar, bookings, video and payouts handled</li>
         <li>See each student&rsquo;s AI-session data before every call</li>
         <li>Publish your own library of poses and sequences</li>
@@ -1015,7 +1015,7 @@ function pricing() {
       <button class="btn btn-primary btn-block" type="button" data-sheet style="margin-top:auto">Join the waitlist</button>
     </div>
   </div>
-  <p class="fine" style="text-align:center;margin:20px auto 0;max-width:560px">Subscribe on the web or in the app. Web is a little cheaper for us, so that is where new perks show up first.</p>
+  <p class="fine" style="text-align:center;margin:20px auto 0;max-width:560px">Subscribe on the web or in the app; the app is the same either way. Web is a little cheaper for us, so perks outside the app show up there first.</p>
   <p class="note" style="max-width:560px;margin:26px auto 0"><strong>Nothing is charged today.</strong> There is no app, no checkout and no payment form anywhere on this site. These are the prices we intend to open at, and the waitlist never asks for a card.</p>
 </section>
 
@@ -1024,7 +1024,7 @@ function pricing() {
     <div>
       <p class="kicker">Coach bookings</p>
       <h2 data-reveal>Pay the teacher, <em class="soft">not the app.</em></h2>
-      <p class="lede" data-reveal>Coaches set their own hourly rate. Of every session, 80% goes to the coach and 20% keeps the calls, calendar, payments and payouts running. Book a coach you have worked with before and our share drops, so the people who stick with you cost less to keep.</p>
+      <p class="lede" data-reveal>Coaches set their own hourly rate. Of every 1:1 session, 80% goes to the coach and 20% keeps the calls, calendar, payments and payouts running. Book a coach you have worked with before and our share drops, so the people who stick with you cost less to keep.</p>
       <p style="margin:28px 0 0"><a class="arrow" href="/coaches/">How coach bookings work <span aria-hidden="true">&rarr;</span></a></p>
     </div>
     <div class="rows" data-reveal>
@@ -1286,7 +1286,7 @@ function llms() {
   L.push('## Pricing');
   L.push('');
   L.push(`- Trial: $${D.pricing.trial.price} for ${D.pricing.trial.period}, then rolls into membership unless cancelled.`);
-  L.push(`- Membership: $${D.pricing.membership.price} per ${D.pricing.membership.period}. Same price on web and in-app.`);
+  L.push(`- Membership: $${D.pricing.membership.price} per ${D.pricing.membership.period} in the US, on the web and in the app. Elsewhere the App Store sets its own local price.`);
   L.push(`- Coaching is NOT included. Coaches set their own rate, typically ${D.pricing.coaching.rateBand}.`);
   L.push(`- Coaches keep ${D.pricing.coaching.coachKeeps}. On repeat bookings with the same student the`);
   L.push(`  platform share drops to ${D.pricing.coaching.repeatShare}. Payouts run through ${D.pricing.coaching.processor}.`);
