@@ -91,7 +91,7 @@ const PAGES = [
   { slug: 'coaches',     file: 'coaches/index.html',    nav: 'Coaches',     title: `Coaches — ${B.name}`,
     desc: 'Real yoga teachers, booked by the hour. Coaches set their own rate and keep 80% of every 1:1 session. Apply to join the founding cohort.' },
   { slug: 'pricing',     file: 'pricing/index.html',    nav: 'Pricing',     title: `Pricing — ${B.name}`,
-    desc: '$3 for 14 days, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of every 1:1 session.' },
+    desc: '$3 for your first month, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of every 1:1 session.' },
   { slug: 'privacy',     file: 'privacy/index.html',    nav: null,          title: `Privacy — ${B.name}`,
     desc: 'What Yoginini stores and what it does not. Video is analysed on your phone and discarded; only joint angles and scores leave the device.' }
 ];
@@ -578,7 +578,7 @@ function home() {
           <span class="mono" style="font-size:11px;color:var(--muted-2)">TRY IT</span>
           <span style="font-family:var(--serif);font-size:64px;line-height:1">$${D.pricing.trial.price}</span>
           <span class="fine" style="margin:0">for ${esc(D.pricing.trial.period)}</span>
-          <p class="body" style="margin:0;font-size:14px">Full access, every pose, every cue. On day 14 it becomes the monthly plan unless you cancel, and we remind you two days before.</p>
+          <p class="body" style="margin:0;font-size:14px">Full access, every pose, every cue. After the first month it becomes the monthly plan unless you cancel, and we remind you two days before.</p>
         </div>
         <div class="card card-dark" data-reveal>
           <span class="mono" style="font-size:11px;color:var(--lav)">MEMBERSHIP</span>
@@ -1003,7 +1003,7 @@ function pricing() {
     <div class="card" style="padding:40px 36px;border-radius:28px;box-shadow:0 40px 60px -40px rgba(26,22,32,.3);gap:18px">
       <span class="mono" style="font-size:11px;color:var(--muted-2)">TRIAL</span>
       <span style="display:flex;align-items:baseline;gap:8px"><span style="font-family:var(--serif);font-size:80px;line-height:1">$${P.trial.price}</span><span class="body">for ${esc(P.trial.period)}</span></span>
-      <p class="body" style="margin:0">Everything in membership, for two weeks. On day 14 it rolls into the monthly plan unless you cancel. We email you on day 12, and cancelling is one tap.</p>
+      <p class="body" style="margin:0">Everything in membership, for your first month. Then it rolls into the monthly plan unless you cancel. We email you two days before, and cancelling is one tap.</p>
       <button class="btn btn-ghost btn-block" type="button" data-sheet style="margin-top:auto">Join the waitlist</button>
     </div>
     <div class="card card-dark" style="padding:40px 36px;border-radius:28px;border-color:var(--purple);box-shadow:0 40px 60px -40px rgba(26,22,32,.5);gap:18px">

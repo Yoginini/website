@@ -136,7 +136,7 @@
     "currency": "USD",
     "trial": {
       "price": 3,
-      "period": "14 days",
+      "period": "your first month",
       "rollsIntoMembership": true
     },
     "membership": {
@@ -280,7 +280,7 @@
     },
     {
       "question": "What happens after the $3 trial?",
-      "answer": "After 14 days it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap."
+      "answer": "After your first month it becomes the $15 monthly membership. We email you two days before, and cancelling takes one tap."
     },
     {
       "question": "Are coaching sessions included in the membership?",
@@ -303,8 +303,8 @@
       "answer": "Not yet. Nothing has shipped and there is no app to download. Our first founding coach has joined, and the waitlist is open; booking starts when the app launches."
     },
     {
-      "question": "What exactly happens on day 14?",
-      "answer": "Your $3 trial becomes the $15 monthly membership. You'll get an email on day 12 with a one-tap cancel link. Cancel before day 14 and you pay nothing more."
+      "question": "What happens when the first month ends?",
+      "answer": "Your $3 first month becomes the $15 monthly membership. You'll get an email two days before, with a one-tap cancel link. Cancel before the month ends and you pay nothing more."
     },
     {
       "question": "Is the price the same in the app and on the web?",
@@ -351,7 +351,7 @@
     {
       "url": "https://yoginini.us/pricing/",
       "title": "Pricing — Yoginini",
-      "description": "$3 for 14 days, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of every 1:1 session."
+      "description": "$3 for your first month, then $15 a month. Coaches are paid separately at their own hourly rate and keep 80% of every 1:1 session."
     },
     {
       "url": "https://yoginini.us/privacy/",
